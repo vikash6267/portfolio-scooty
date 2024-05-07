@@ -8,6 +8,7 @@
   const {
       LOGIN_API,
       DOWNLOAD_API,
+      CONTACT_US_API,
     } = endpoints
 
   export function login(email, password, navigate) {
@@ -72,5 +73,52 @@
         // Handle error
         toast.error('Failed to download Excel file');
       }
+    };
+
+
+    // add offer 
+    export const addOffer = async (data, token) => {
+      const toastId = toast.loading("Loading...")
+      try {
+        const response = await apiConnector("POST", CREATE_COURSE_API, data, {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${token}`,
+        })
+        console.log("ADD OFFER API RESPONSE............", response)
+        if (!response?.data?.success) {
+          throw new Error("Could Not Add Offer Details")
+        }
+        toast.success("Add offer Details Added Successfully")
+      } catch (error) {
+        console.log("CREATE OFFER API ERROR............", error)
+        toast.error(error.message)
+      }
+      toast.dismiss(toastId)
+    }
+
+
+    //normal operations for client 
+
+    export const contactUsForm = async () => {
+      const toastId = toast.loading("Loading...")
+
+      try {
+        const response = await apiConnector("POST", CONTACT_US_API);
+        
+        console.log('Response:', response);
+        
+        if (!response.data.success) {
+          throw new Error(response.data.message)
+        }
+  
+        toast.success("Send Query Successful")
+       
+      } catch (err) {
+        console.error('Error:', err);
+        // Handle error
+        toast.error('Technical issue please try again later');
+      }
+      toast.dismiss(toastId)
+
     };
     

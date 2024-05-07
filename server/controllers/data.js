@@ -1,7 +1,9 @@
 
 const userModel = require('../model/user');
+const ExcelJS = require('exceljs');
 
 // Define the exportToExcel function as an endpoint
+// for query details 
 exports.exportToExcel = async (req, res) => {
   try {
     // Fetch all users from the database
@@ -13,10 +15,9 @@ exports.exportToExcel = async (req, res) => {
 
     // Define worksheet headers
     worksheet.columns = [
-      { header: 'Username', key: 'username', width: 20 },
-      { header: 'Name', key: 'name', width: 20 },
-      { header: 'City', key: 'city', width: 20 },
-      { header: 'Total Count', key: 'totalCount', width: 15 },
+      { header: 'Username', key: 'firstname', width: 20 },
+      { header: 'Email', key: 'email', width: 20 },
+      { header: 'Message', key: 'message', width: 15 },
       { header: 'Contact', key: 'contact', width: 15 }
       // Add more columns as needed
     ];
@@ -24,12 +25,11 @@ exports.exportToExcel = async (req, res) => {
     // Populate worksheet with user data
     users.forEach(user => {
       worksheet.addRow({
-        username: user.username,
-        name: user.name,
-        city: user.city,
-        totalCount: user.totalCount,
-        contact: user.contact
-        // Add more fields as needed
+        naem : user.firstname,
+        email: user.email,
+        message: user.message,
+        contact: user.contact,
+    
       });
     });
 
@@ -47,3 +47,6 @@ exports.exportToExcel = async (req, res) => {
     res.status(500).send('Error downloading users');
   }
 };
+
+
+
