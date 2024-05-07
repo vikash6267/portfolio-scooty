@@ -9,6 +9,7 @@
       LOGIN_API,
       DOWNLOAD_API,
       CONTACT_US_API,
+      ALL_OFFER_SCOOTY
     } = endpoints
 
   export function login(email, password, navigate) {
@@ -96,6 +97,26 @@
       toast.dismiss(toastId)
     }
 
+
+      // Get offer 
+      export const getAllScooty = async () => {
+        let result = null
+        const toastId = toast.loading("Loading...")
+        try {
+          const response = await apiConnector("GET",ALL_OFFER_SCOOTY)
+          console.log("ADD OFFER API RESPONSE............", response)
+          if (!response?.data?.success) {
+            throw new Error("Could Not Add Offer Details")
+          }
+          console.log(response)
+          result = response?.data
+          toast.success("Get offer Details Added Successfully")
+        } catch (error) {
+          console.log("GET OFFER API ERROR............", error)
+          toast.error(error.message)
+        }
+        toast.dismiss(toastId)
+      }
 
     //normal operations for client 
 

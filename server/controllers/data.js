@@ -25,7 +25,7 @@ exports.exportToExcel = async (req, res) => {
     // Populate worksheet with user data
     users.forEach(user => {
       worksheet.addRow({
-        naem : user.firstname,
+        name : user.firstname,
         email: user.email,
         message: user.message,
         contact: user.contact,

@@ -4,9 +4,9 @@ const{ exportToExcel } = require("../controllers/data")
 const{ auth } = require("../middleware/auth")
 const router = express.Router();
 
-;
+
 router.post("/admin",login)
-router.get("/download",auth, exportToExcel)
+router.get("/download", exportToExcel)
 
 
 

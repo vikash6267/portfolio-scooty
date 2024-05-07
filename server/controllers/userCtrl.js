@@ -66,3 +66,35 @@ const login = async (req, res) => {
     })
   }
 }
+
+const createInfo = async (req, res) => {
+   const{email,contact,firstname,message} = req.body;
+    try {
+        const infoSave = await userModel.create({
+            email,
+            contact,
+            firstname,
+            message
+        });
+        res.status(200).json({
+            success: true,
+            data: infoSave,
+          })
+    } catch (error) {
+        res.status(500).send({ message: "Somethig went wrong", success: false });
+        console.log(error)
+    }
+}
+
+const getAllInfo = async (req, res) => {
+    try {
+        const allInfo = await userModel.find();
+        res.status(200).json({
+            success: true,
+            data: allInfo,
+          })
+    } catch (error) {
+        res.status(500).send({ success: false, message: "Something went wrong" })
+    }
+}
+module.exports = { createInfo, getAllInfo,login };
