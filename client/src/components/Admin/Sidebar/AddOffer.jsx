@@ -43,6 +43,14 @@ const AddOffer = () => {
     formDataToSend.append("image", formData.image);
 
     // Call addOffer with the FormData object and token
+    setFormData({
+      title: "",
+      offerName: "",
+      cashBack: "",
+      color: "",
+      conditions: "",
+      image: null,
+    });
     addOffer(formDataToSend, token);
   };
 

@@ -65,7 +65,7 @@ exports.getAllScooty = async (req, res) => {
 
 exports.addSerive = async (req, res) => {
   try {
-    let { title, descripation, price, color, charging, topspeed, range } =
+    let { title, description, price, color, charging, topspeed, range } =
       req.body;
 
     console.log(req.files);
@@ -73,7 +73,7 @@ exports.addSerive = async (req, res) => {
 
     if (
       !title ||
-      !descripation ||
+      !description ||
       !price ||
       !color ||
       !charging ||
@@ -92,9 +92,9 @@ exports.addSerive = async (req, res) => {
       process.env.FOLDER_NAME
     );
 
-    const newScooty = await Scooty.create({
+    const newScooty = await Service.create({
       title,
-      descripation,
+      description,
       price,
       color,
       charging,

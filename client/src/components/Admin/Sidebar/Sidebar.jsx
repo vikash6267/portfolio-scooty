@@ -33,7 +33,7 @@ function Sidebar() {
     {
       id: 4,
       name: "All Offers",
-      path: "/dashboard/all-offers",
+      path: "/admin/all-offers",
       icon: <BiSolidOffer />,
     },
   ];

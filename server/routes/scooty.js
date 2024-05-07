@@ -4,7 +4,7 @@ const router = express.Router();
 const { auth } = require("../middleware/auth")
 
 const {
-    createScooty, getAllScooty
+    createScooty, getAllScooty, addSerive
 } = require("../controllers/scooty")
 
 router.post("/createScooty", createScooty)

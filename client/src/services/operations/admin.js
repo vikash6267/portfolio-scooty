@@ -10,6 +10,7 @@ const {
   DOWNLOAD_API,
   CONTACT_US_API,
   ADD_OFFER_API,
+  ALL_OFFER_SCOOTY,
   ALL_SERVICE_SCOOTY
 
 } = endpoints
@@ -121,7 +122,7 @@ export const addservice = async (data, token) => {
 
 
 // Get offer 
-export const getAllScooty = async () => {
+export const getAllOffer = async () => {
   let result = null
   const toastId = toast.loading("Loading...")
   try {
@@ -131,13 +132,14 @@ export const getAllScooty = async () => {
       throw new Error("Could Not Add Offer Details")
     }
     console.log(response)
-    result = response?.data
+    result = response?.data?.data
     toast.success("Get offer Details Added Successfully")
   } catch (error) {
     console.log("GET OFFER API ERROR............", error)
     toast.error(error.message)
   }
   toast.dismiss(toastId)
+  return result
 }
 
 //normal operations for client 
