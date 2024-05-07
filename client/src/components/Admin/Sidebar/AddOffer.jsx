@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { addOffer } from "../../../services/operations/admin";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+
 const AddOffer = () => {
+  const dispatch = useDispatch();
   const { token } = useSelector((state) => state.auth);
   const [formData, setFormData] = useState({
     title: "",
@@ -9,21 +11,43 @@ const AddOffer = () => {
     cashBack: "",
     color: "",
     conditions: "",
-    image: "",
+    image: null, // Initialize image as null
   });
 
   const handleOnChange = (e) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      [e.target.name]: e.target.value,
-    }));
+    if (e.target.name === "image") {
+      // Set image property to the File object
+      setFormData((prevData) => ({
+        ...prevData,
+        image: e.target.files[0],
+      }));
+    } else {
+      // For other fields, update formData as usual
+      setFormData((prevData) => ({
+        ...prevData,
+        [e.target.name]: e.target.value,
+      }));
+    }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    addOffer(formData, token);
+
+    // Create FormData object
+    const formDataToSend = new FormData();
+    formDataToSend.append("title", formData.title);
+    formDataToSend.append("offerName", formData.offerName);
+    formDataToSend.append("cashBack", formData.cashBack);
+    formDataToSend.append("color", formData.color);
+    formDataToSend.append("conditions", formData.conditions);
+    formDataToSend.append("image", formData.image);
+
+    // Call addOffer with the FormData object and token
+    addOffer(formDataToSend, token);
   };
+
+
+
   return (
     <>
       <div className="flex flex-col gap-2 items-center justify-center mt-10 ">
@@ -42,10 +66,12 @@ const AddOffer = () => {
               className="p-5 bg-transparent outline-2 outline-gray-400 outline-none rounded"
             />
             <input
+              id="image"
               type="file"
-              name="thumbnailImage"
+              accept=".png, .jpg, .jpeg"
+              name="image"
               placeholder="img"
-              value={formData.image}
+              // value={formData.image}
               onChange={handleOnChange}
             />
           </div>
