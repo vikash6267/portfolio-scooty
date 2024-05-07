@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
   margin: 0;
   padding: 0;
@@ -12,12 +11,13 @@ html,
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
-  background: rgb(238, 174, 202);
+  /* background: rgb(238, 174, 202);
   background: radial-gradient(
     circle,
     rgba(238, 174, 202, 1) 0%,
     rgba(148, 187, 233, 1) 100%
-  );
+  ); */
+  background-color: #f5fffa;
 }
 
 .main-container {
@@ -25,6 +25,6 @@ body {
   margin: 0 auto 0 auto;
 }
 
-.image-cont{
+.image-cont {
   background-image: url("/public/login.jpg");
 }
