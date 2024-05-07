@@ -11,6 +11,8 @@ router.post("/createScooty", createScooty)
 
 router.get("/getScooty", getAllScooty)
 
+router.post("/addSerive", addSerive)
+
 
 
 module.exports = router;
