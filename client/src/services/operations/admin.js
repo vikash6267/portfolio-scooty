@@ -9,6 +9,8 @@ const {
   LOGIN_API,
   DOWNLOAD_API,
   CONTACT_US_API,
+  ADD_OFFER_API
+
 } = endpoints
 
 export function login(email, password, navigate) {

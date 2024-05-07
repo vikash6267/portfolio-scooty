@@ -43,7 +43,7 @@ const AddOffer = () => {
             />
             <input
               type="file"
-              name="thumbnailImage"
+              name="image"
               placeholder="img"
               value={formData.image}
               onChange={handleOnChange}
