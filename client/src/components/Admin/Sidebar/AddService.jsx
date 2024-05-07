@@ -1,17 +1,19 @@
 import React, { useState } from "react";
-import { addOffer } from "../../../services/operations/admin";
+import { addservice } from "../../../services/operations/admin";
 import { useDispatch, useSelector } from "react-redux";
 
-const AddOffer = () => {
+const AddService = () => {
   const dispatch = useDispatch();
   const { token } = useSelector((state) => state.auth);
   const [formData, setFormData] = useState({
     title: "",
-    offerName: "",
-    cashBack: "",
+    descripation: "",
+    price: "",
     color: "",
-    conditions: "",
-    image: null, // Initialize image as null
+    charging: "",
+    topspeed: "",
+    range: "",
+    image: null,
   });
 
   const handleOnChange = (e) => {
@@ -36,14 +38,17 @@ const AddOffer = () => {
     // Create FormData object
     const formDataToSend = new FormData();
     formDataToSend.append("title", formData.title);
-    formDataToSend.append("offerName", formData.offerName);
-    formDataToSend.append("cashBack", formData.cashBack);
+    formDataToSend.append("descripation", formData.descripation);
+    formDataToSend.append("price", formData.price);
     formDataToSend.append("color", formData.color);
-    formDataToSend.append("conditions", formData.conditions);
+    formDataToSend.append("range", formData.range);
+    formDataToSend.append("topspeed", formData.topspeed);
+    formDataToSend.append("charging", formData.charging);
+
     formDataToSend.append("image", formData.image);
 
     // Call addOffer with the FormData object and token
-    addOffer(formDataToSend, token);
+    addservice(formDataToSend, token);
   };
 
   return (
@@ -77,8 +82,8 @@ const AddOffer = () => {
             <input
               type="text"
               placeholder="Write your offer name"
-              name="offerName"
-              value={formData.offerName}
+              name="descripation"
+              value={formData.descripation}
               onChange={handleOnChange}
               className="p-5 bg-transparent outline-2 outline-gray-400 outline-none rounded"
             />
@@ -87,8 +92,8 @@ const AddOffer = () => {
             <input
               type="text"
               placeholder="Write your cashback"
-              name="cashBack"
-              value={formData.cashBack}
+              name="price"
+              value={formData.price}
               onChange={handleOnChange}
               className="p-5 bg-transparent outline-2 outline-gray-400 outline-none rounded"
             />
@@ -107,8 +112,28 @@ const AddOffer = () => {
             <input
               type="text"
               placeholder="Write your conditions"
-              name="conditions"
-              value={formData.conditions}
+              name="charging"
+              value={formData.charging}
+              className="p-5 bg-transparent outline-2 outline-gray-400 outline-none rounded"
+              onChange={handleOnChange}
+            />
+          </div>
+          <div className="grid grid-cols-1 ">
+            <input
+              type="text"
+              placeholder="Write your conditions"
+              name="topspeed"
+              value={formData.topspeed}
+              className="p-5 bg-transparent outline-2 outline-gray-400 outline-none rounded"
+              onChange={handleOnChange}
+            />
+          </div>
+          <div className="grid grid-cols-1 ">
+            <input
+              type="text"
+              placeholder="Write your conditions"
+              name="range"
+              value={formData.range}
               className="p-5 bg-transparent outline-2 outline-gray-400 outline-none rounded"
               onChange={handleOnChange}
             />
@@ -127,4 +152,4 @@ const AddOffer = () => {
   );
 };
 
-export default AddOffer;
+export default AddService;

@@ -26,6 +26,12 @@ function Sidebar() {
     },
     {
       id: 3,
+      name: "Add Service",
+      path: "/admin/add-service",
+      icon: <GiScooter />,
+    },
+    {
+      id: 4,
       name: "All Offers",
       path: "/dashboard/all-offers",
       icon: <BiSolidOffer />,

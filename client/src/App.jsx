@@ -13,6 +13,7 @@ import Contact from "./pages/contact/Contact";
 import Login from "./components/Admin/Login";
 import Download from "./components/Admin/Sidebar/Download";
 import AddOffer from "./components/Admin/Sidebar/AddOffer";
+import AddService from "./components/Admin/Sidebar/AddService";
 const App = () => {
   const { token } = useSelector((state) => state.auth);
 
@@ -53,6 +54,14 @@ const App = () => {
             element={
               <PrivateRoute>
                 <AddOffer />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/admin/add-service"
+            element={
+              <PrivateRoute>
+                <AddService />
               </PrivateRoute>
             }
           />

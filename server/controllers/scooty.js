@@ -12,7 +12,7 @@ exports.createScooty = async (req, res) => {
       conditions
     } = req.body
 
-    console.log(req.file)
+    console.log(req.files)
     const thumbnail = req.files.image
 
     if (!title ||

@@ -9,7 +9,8 @@ const {
   LOGIN_API,
   DOWNLOAD_API,
   CONTACT_US_API,
-  ADD_OFFER_API
+  ADD_OFFER_API,
+  ALL_SERVICE_SCOOTY
 
 } = endpoints
 
@@ -94,6 +95,25 @@ export const addOffer = async (data, token) => {
     toast.success("Add offer Details Added Successfully")
   } catch (error) {
     console.log("CREATE OFFER API ERROR............", error)
+    toast.error(error.message)
+  }
+  toast.dismiss(toastId)
+}
+export const addservice = async (data, token) => {
+  const toastId = toast.loading("Loading...")
+  console.log(token)
+  try {
+    const response = await apiConnector("POST", ALL_SERVICE_SCOOTY, data, {
+      "Content-Type": "multipart/form-data",
+      Authorization: `Bearer ${token}`,
+    })
+    console.log("ADD service API RESPONSE............", response)
+    if (!response?.data?.success) {
+      throw new Error("Could Not Add services Details")
+    }
+    toast.success("Add service Details Added Successfully")
+  } catch (error) {
+    console.log("CREATE service API ERROR............", error)
     toast.error(error.message)
   }
   toast.dismiss(toastId)
