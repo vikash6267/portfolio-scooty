@@ -143,3 +143,46 @@ exports.deleteScooty = async (req, res) => {
   }
 };
 
+
+exports.getAllServices = async (req, res) => {
+  try {
+    const allScooty = await  Service.find({});
+    res.status(200).json({
+      success: true,
+      data: allScooty,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      message: "Failed to get Service",
+      error: error.message,
+    });
+  }
+};
+
+
+exports.deleteService = async (req, res) => {
+  try {
+    const {scootyId} = req.body; // Assuming Scooty ID is passed in the URL params
+    const deletedScooty = await Service.findByIdAndDelete(scootyId);
+    if (!deletedScooty) {
+      return res.status(404).json({
+        success: false,
+        message: "Scooty not found",
+      });
+    }
+    res.status(200).json({
+      success: true,
+      message: "Scooty deleted successfully",
+      data: deletedScooty,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      message: "Failed to delete Scooty",
+      error: error.message,
+    });
+  }
+};

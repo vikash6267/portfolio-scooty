@@ -13,7 +13,6 @@ const AllOffer = () => {
 
       if (result) {
         setOffers(result)
-console.log(offers)
       }
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -35,7 +34,6 @@ console.log(offers)
 
   <div>
 
-    <h1>All Offers List </h1>
 
 
     <div>

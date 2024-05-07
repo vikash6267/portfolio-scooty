@@ -15,6 +15,7 @@ import Download from "./components/Admin/Sidebar/Download";
 import AddOffer from "./components/Admin/Sidebar/AddOffer";
 import AddService from "./components/Admin/Sidebar/AddService";
 import AllOffer from "./components/Admin/Sidebar/AllOffer";
+import AllService from "./components/Admin/Sidebar/AllService";
 const App = () => {
   const { token } = useSelector((state) => state.auth);
 
@@ -66,11 +67,20 @@ const App = () => {
               </PrivateRoute>
             }
           />
+
           <Route
-            path="admin/all-offers"
+            path="/admin/all-offers"
             element={
               <PrivateRoute>
                 <AllOffer />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/admin/all-service"
+            element={
+              <PrivateRoute>
+                <AllService />
               </PrivateRoute>
             }
           />

@@ -36,6 +36,12 @@ function Sidebar() {
       path: "/admin/all-offers",
       icon: <BiSolidOffer />,
     },
+    {
+      id: 5,
+      name: "All Services",
+      path: "/admin/all-service",
+      icon: <BiSolidOffer />,
+    },
   ];
 
   const [isOpen, setIsOpen] = useState(false);

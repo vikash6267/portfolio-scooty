@@ -12,7 +12,9 @@ const {
   ADD_OFFER_API,
   ALL_OFFER_SCOOTY,
   ALL_SERVICE_SCOOTY,
-  DELETE_SCOOTY
+  DELETE_SCOOTY,
+  DELETE_SERIVICE,
+  GET_ALL_SERVICE_SCOOTY
 
 } = endpoints
 
@@ -122,12 +124,33 @@ export const addservice = async (data, token) => {
 }
 
 
-// Get offer 
+// Get Opertions 
 export const getAllOffer = async () => {
   let result = null
   const toastId = toast.loading("Loading...")
   try {
     const response = await apiConnector("GET", ALL_OFFER_SCOOTY)
+    console.log("ADD OFFER API RESPONSE............", response)
+    if (!response?.data?.success) {
+      throw new Error("Could Not Add Offer Details")
+    }
+    console.log(response)
+    result = response?.data?.data
+    toast.success("Get offer Details Added Successfully")
+  } catch (error) {
+    console.log("GET OFFER API ERROR............", error)
+    toast.error(error.message)
+  }
+  toast.dismiss(toastId)
+  return result
+}
+
+
+export const getAllServices = async () => {
+  let result = null
+  const toastId = toast.loading("Loading...")
+  try {
+    const response = await apiConnector("GET", GET_ALL_SERVICE_SCOOTY)
     console.log("ADD OFFER API RESPONSE............", response)
     if (!response?.data?.success) {
       throw new Error("Could Not Add Offer Details")
@@ -161,6 +184,21 @@ export const deleteOffer = async (scootyId) => {
   toast.dismiss(toastId)
 }
 
+export const deleteService = async (scootyId) => {
+  const toastId = toast.loading("Loading...")
+  try {
+    const response = await apiConnector("DELETE", DELETE_SERIVICE, {scootyId})
+    // console.log("DELETE SECTION API RESPONSE............", response)
+    if (!response?.data?.success) {
+      throw new Error("Could Not Delete Offer")
+    }
+    toast.success("Offer Deleted")
+  } catch (error) {
+    console.log("DELETE OFFER API ERROR............", error)
+    toast.error(error.message)
+  }
+  toast.dismiss(toastId)
+}
 
 
 
