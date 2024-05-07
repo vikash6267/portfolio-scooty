@@ -1,4 +1,5 @@
 const { contactUsEmail } = require("../template/contactFormRes")
+const{ distibutorEmail } = require("../template/distibutorForm")
 const mailSender = require("../utils/mailSender")
 const User = require("../model/user")
 
@@ -42,10 +43,13 @@ exports.distributor = async (req, res) => {
   console.log(req.body)
   try {
     const emailRes = await mailSender(
-      email,
+      "vikasmaheshwari6267@gmail.com",
       "Recived new distributor mail ",
-      contactUsEmail(name, location, contact)
+      distibutorEmail(name, location, contact)
     )
+
+
+   
     // console.log("Email Res ", emailRes)
     return res.json({
       success: true,
