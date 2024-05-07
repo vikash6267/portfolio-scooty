@@ -48,7 +48,7 @@ exports.createScooty = async (req, res) => {
 
 exports.getAllScooty = async (req, res) => {
   try {
-    const allScooty = Scooty.find();
+    const allScooty = await  Scooty.find({});
     res.status(200).json({
       success: true,
       data: allScooty,
