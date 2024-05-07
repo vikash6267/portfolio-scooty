@@ -11,7 +11,8 @@ const {
   CONTACT_US_API,
   ADD_OFFER_API,
   ALL_OFFER_SCOOTY,
-  ALL_SERVICE_SCOOTY
+  ALL_SERVICE_SCOOTY,
+  DELETE_SCOOTY
 
 } = endpoints
 
@@ -141,6 +142,33 @@ export const getAllOffer = async () => {
   toast.dismiss(toastId)
   return result
 }
+
+//delete operations
+
+export const deleteOffer = async (scootyId) => {
+  const toastId = toast.loading("Loading...")
+  try {
+    const response = await apiConnector("DELETE", DELETE_SCOOTY, {scootyId})
+    // console.log("DELETE SECTION API RESPONSE............", response)
+    if (!response?.data?.success) {
+      throw new Error("Could Not Delete Offer")
+    }
+    toast.success("Offer Deleted")
+  } catch (error) {
+    console.log("DELETE OFFER API ERROR............", error)
+    toast.error(error.message)
+  }
+  toast.dismiss(toastId)
+}
+
+
+
+
+
+
+
+
+
 
 //normal operations for client 
 

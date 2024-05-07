@@ -8,7 +8,11 @@ export const endpoints = {
   CONTACT_US_API: BASE_URL + "/user/reach/contact",
   ADD_OFFER_API: BASE_URL + "/scooty/createScooty",
   ALL_OFFER_SCOOTY: BASE_URL + "/scooty/getScooty",
-  ALL_SERVICE_SCOOTY: BASE_URL + "/scooty/addSerive"
+  ALL_SERVICE_SCOOTY: BASE_URL + "/scooty/addSerive",
+
+
+  DELETE_SCOOTY: BASE_URL + "/scooty/deleteScooty"
+
 
 
 
