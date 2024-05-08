@@ -1,9 +1,9 @@
 
 
-const BASE_URL = "http://localhost:4000/api/v1"
+const BASE_URL = "https://portfolio-scooty.onrender.com/api/v1"
 
 export const endpoints = {
-  LOGIN_API: "http://localhost:4000/api/v1/user/admin",
+  LOGIN_API: "https://portfolio-scooty.onrender.com/api/v1/user/admin",
   DOWNLOAD_API: BASE_URL + "/user/download",
   CONTACT_US_API: BASE_URL + "/reach/contact",
   ADD_OFFER_API: BASE_URL + "/scooty/createScooty",
