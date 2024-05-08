@@ -3,12 +3,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
+import one from "../../../public/assests/1.jpg"
+import two from "../../../public/assests/2.jpg"
+
 const Slider = () => {
   return (
-    <div>
+    <div className=" w-screen h-screen">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        style={{ width: "100%" }}
+        // style={{ width: "100vw !important" }} 
         spaceBetween={50}
         slidesPerView={3}
         navigation
@@ -18,22 +21,23 @@ const Slider = () => {
             slidesPerView: 1,
           },
           555: {
-            slidesPerView: 2,
+            slidesPerView: 1,
           },
           788: {
-            slidesPerView: 3,
+            slidesPerView: 1,
           },
         }}
+        className="w-screen "
       >
-        <SwiperSlide>
+        <SwiperSlide >
           <img
-            src="https://wroleyelectricscooter.in/assets/images/e-scooter-transformed.png"
+            src={one}
             alt="not found"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://wroleyelectricscooter.in/assets/images/wroley-platina-pic-1.png"
+            src={two}
             alt="not found"
           />
         </SwiperSlide>
