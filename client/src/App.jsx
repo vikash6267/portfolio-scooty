@@ -17,10 +17,6 @@ import AddService from "./components/Admin/Sidebar/AddService";
 import AllOffer from "./components/Admin/Sidebar/AllOffer";
 import AllService from "./components/Admin/Sidebar/AllService";
 import Service from "./pages/services/Service";
-import Info from "./pages/home/Info";
-import Compare from "./pages/home/Compare";
-
-
 const App = () => {
   const { token } = useSelector((state) => state.auth);
 
@@ -31,8 +27,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/service" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/info" element={<Info />} />
-        <Route path="/compare" element={<Compare />} />
+        <Route path="/service" element={<Service />} />
 
         <Route
           path="/admin/login"

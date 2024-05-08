@@ -23,7 +23,9 @@ const Home = () => {
           </Slide>
           <Slide direction="right">
             <div className="hero-second">
-              <h4 className="hero-title">WROLEY ELECTRIC SCOOTER</h4>
+              <h4 className="hero-title text-xl font-bold">
+                WROLEY ELECTRIC SCOOTER
+              </h4>
               <h1 className="hero-heading">
                 Wroley Electric Scooter: The New Electric Scooter in Delhi
               </h1>
@@ -55,7 +57,9 @@ const Home = () => {
         <div className="here-section" style={{ marginTop: "80px" }}>
           <Slide direction="left">
             <div className="hero-second">
-              <h4 className="hero-title">WROLEY ELECTRIC SCOOTER</h4>
+              <h4 className="hero-title text-xl font-bold">
+                WROLEY ELECTRIC SCOOTER
+              </h4>
               <h1 className="hero-heading">
                 Wroley Electric Scooter: The New Electric Scooter in Delhi
               </h1>
