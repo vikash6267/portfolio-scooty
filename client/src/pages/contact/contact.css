@@ -58,4 +58,11 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
   }
+  .second {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .child {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

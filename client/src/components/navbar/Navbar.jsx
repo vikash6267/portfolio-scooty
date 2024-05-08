@@ -7,13 +7,11 @@ import Dialog from "./Dialog";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const[isOpen , setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-
- 
   return (
     <nav className="navbar relative">
       <div className="navbar-container ">
@@ -30,40 +28,38 @@ const Navbar = () => {
         <Slide direction="down">
           <ul className={`navbar-menu ${isMenuOpen ? "open" : ""}`}>
             <li>
-              <Link className="nav-link" to="/">
+              <Link className="nav-link" to="/" onClick={toggleMenu}>
                 Home
               </Link>
             </li>
             <li>
-              <Link className="nav-link" to="/about">
+              <Link className="nav-link" to="/about" onClick={toggleMenu}>
                 About Us
               </Link>
             </li>
             <li>
-              <Link className="nav-link" to="/service">
+              <Link className="nav-link" to="/service" onClick={toggleMenu}>
                 Our Services
               </Link>
             </li>
             <li>
-              <Link className="nav-link" to="/contact">
+              <Link className="nav-link" to="/contact " onClick={toggleMenu}>
                 Contact
               </Link>
             </li>
 
             <li>
-          <button className=" ml-2 bg-black p-1 px-2 rounded-md hover:scale-105 transition-all duration-300" onClick={()=>setIsOpen(true)}> 
-          Become A DealrShip
-         
-        </button>
-          </li>
+              <button
+                className=" ml-2 bg-black p-1 px-2 rounded-md hover:scale-105 transition-all duration-300"
+                onClick={() => setIsOpen(true)}
+              >
+                Become A DealrShip
+              </button>
+            </li>
           </ul>
-        
         </Slide>
-
-
-        
       </div>
-      {isOpen && <Dialog setIsOpen={setIsOpen}/>}
+      {isOpen && <Dialog setIsOpen={setIsOpen} />}
     </nav>
   );
 };
