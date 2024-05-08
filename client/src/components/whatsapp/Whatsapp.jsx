@@ -3,9 +3,9 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import "./whatsapp.css";
 const Whatsapp = () => {
   const handleClick = () => {
-    const phoneNumber = "9009594537";
+    const phoneNumber = "+919009594537";
 
-    const message = encodeURIComponent("Hello! I want to chat with you.");
+    const message = encodeURIComponent("Hello! Wroley Scooter");
 
     const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
 
