@@ -70,6 +70,9 @@ body {
     flex-wrap: wrap;
     flex: 1;
   }
+  .innerCard {
+    width: 350px !important;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
