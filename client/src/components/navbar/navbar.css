@@ -36,6 +36,7 @@
 
 .navbar-menu li {
   margin-right: 1rem;
+  text-align: start;
 }
 
 .navbar-menu li a {
@@ -82,6 +83,11 @@
 
   .navbar-menu.open {
     display: flex;
+    text-align: right; 
+    /* background-color: red; */
+  align-items: flex-end;
+  padding-right: 5%;
+  padding-bottom: 400px;
   }
 
   .menu-icon {

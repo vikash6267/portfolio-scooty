@@ -25,10 +25,10 @@ const Navbar = () => {
         >
           {isMenuOpen ? <IoMdClose /> : <IoMdMenu />}
         </div>
-        <Slide direction="down">
-          <ul className={`navbar-menu ${isMenuOpen ? "open" : ""}`}>
+        <Slide direction="down" >
+          <ul className={`navbar-menu ${isMenuOpen ? "open" : ""} `}>
             <li>
-              <Link className="nav-link" to="/" onClick={toggleMenu}>
+              <Link className="nav-link " to="/" onClick={toggleMenu}>
                 Home
               </Link>
             </li>
@@ -49,17 +49,21 @@ const Navbar = () => {
             </li>
 
             <li>
-              <button
-                className=" ml-2 bg-black p-1 px-2 rounded-md hover:scale-105 transition-all duration-300"
-                onClick={() => setIsOpen(true)}
-              >
-                Become A DealrShip
-              </button>
+            <button
+  className="ml-2 bg-black p-1 px-2 rounded-md hover:scale-105 transition-all duration-300"
+  onClick={() => {
+    setIsOpen(true); // This line sets isOpen state to true
+    setIsMenuOpen(false);    // This line calls toggleMenu function
+  }}
+>
+  Become A DealerShip
+</button>
+
             </li>
           </ul>
         </Slide>
       </div>
-      {isOpen && <Dialog setIsOpen={setIsOpen} />}
+      {isOpen && <Dialog setIsOpen={setIsOpen}  />}
     </nav>
   );
 };
