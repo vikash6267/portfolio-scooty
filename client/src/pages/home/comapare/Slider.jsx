@@ -6,7 +6,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 const ImageSlide = ({images}) => {
  
   return (
-    <div className="w-[80%] mx-auto bg-red-400 flex items-center justify-center ">
+    <div className="lg:w-[80%] mx-auto  flex items-center justify-center ">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         // style={{ width: "100vw !important" }} 

@@ -15,10 +15,10 @@ const Navbar = () => {
   return (
     <nav className="navbar relative">
       <div className="navbar-container ">
-        <img
+       <Link to="/"> <img
           src="https://wroleyelectricscooter.in/assets/images/logo.png"
           alt="not found"
-        />
+        /></Link>
         <div
           className={`menu-icon ${isMenuOpen ? "open" : ""}`}
           onClick={toggleMenu}

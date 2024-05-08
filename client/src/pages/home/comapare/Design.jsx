@@ -10,7 +10,7 @@ function Design() {
 <p className=' text-sm'>The all-new TVS iQube is designed to give you the best of comfort, convenience and superior riding experience. Add to this striking good looks and trusted build quality from TVS, and what you get is an electric scooter that’s just the best!</p>
 </div>
 
-<div className=' w-[80%] mx-auto'>
+<div className=' lg:w-[80%] w-[92%] mx-auto'>
 <img src={img} alt="" />
 </div>
 

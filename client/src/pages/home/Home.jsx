@@ -14,7 +14,7 @@ const Home = () => {
       <Slider />
       <div className="main-container">
         <marquee className="marq" direction="left" loop="">
-          <div className="">New Year 2024 Offer 100%* Cashback</div>
+          <div className=" lg:text-2xl md:text-2xl xl:lg:text-2xl text-sm">New Year 2024 Offer 100%* Cashback</div>
         </marquee>
 
         <div className="here-section">
