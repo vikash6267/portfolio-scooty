@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getAllServices } from "../../services/operations/admin";
-
+import { Link } from "react-router-dom";
 const Service = () => {
   const [service, setServices] = useState([]);
 
@@ -16,34 +16,37 @@ const Service = () => {
 
   return (
     <>
-      <div className=" card main-container ">
-        {service?.map((currElem) => (
-          <div className="innerCard" key={currElem._id}>
+      <div className="card main-container">
+        {service.map((currElem) => (
+          <div
+            className="innerCard"
+            style={{ backgroundImage: "url(../../public/assests/bg.jpg)" }}
+          >
             <div className="img">
               <img src={currElem?.image} alt="not found" />
             </div>
             <br />
             <br />
-            <span className="font-bold text-xl text-wrap object-contain">
-              {currElem.description}
+            <span className="font-bold text-xl whitespace-wrap">
+              {/* {currElem.description} */}
             </span>
             <span className="text-red-400 font-bold ">{currElem.color}</span>
             <span className="font-bold">
               Top Speed :
-              <span
-                className="text-blue-600  "
-              >
-                {currElem.topspeed}
-              </span>{" "}
+              <span className="text-blue-600">{currElem.topspeed}</span>{" "}
             </span>
             <br />
-            <hr />
+            <div className="border border-b-2 border-blue-700"></div>
             <br />
             <span className="font-bold">Top Range : {currElem.range}</span>
             <span className="font-bold">Price : ₹{currElem.price}</span>
-            <button className="bg-black text-white font-bold p-2 mt-2">
+            <br />
+            <Link
+              to="/contact"
+              className="btn-grad bg-black text-white font-bold p-2 mt-2"
+            >
               Contact With Us
-            </button>
+            </Link>
           </div>
         ))}
       </div>

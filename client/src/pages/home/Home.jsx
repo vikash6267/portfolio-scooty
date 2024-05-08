@@ -6,7 +6,7 @@ import { Slide } from "react-awesome-reveal";
 const Home = () => {
   return (
     <>
-        <Slider />
+      <Slider />
       <div className="main-container">
         <marquee className="marq" direction="left" loop="">
           <div className="">New Year 2024 Offer 100%* Cashback</div>
