@@ -57,6 +57,7 @@ const AddOffer = () => {
   return (
     <>
       <div className="flex flex-col gap-2 items-center justify-center mt-10 ">
+        <h2>Add Offer</h2>
         <form
           onSubmit={handleSubmit}
           action=""

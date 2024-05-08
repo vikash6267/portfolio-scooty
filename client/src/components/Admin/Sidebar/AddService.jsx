@@ -63,7 +63,8 @@ const AddService = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-2 items-center justify-center mt-10 ">
+      <div className="flex flex-col gap-2 items-center justify-center  ">
+        <h2>Add Services</h2>
         <form
           onSubmit={handleSubmit}
           action=""
@@ -131,7 +132,7 @@ const AddService = () => {
           <div className="grid grid-cols-1 ">
             <input
               type="text"
-              placeholder="Write your top-speed"
+              placeholder="Write  top-speed km/h"
               name="topspeed"
               value={formData.topspeed}
               className="p-5 bg-transparent outline-2 outline-gray-400 outline-none rounded"
@@ -141,7 +142,7 @@ const AddService = () => {
           <div className="grid grid-cols-1 ">
             <input
               type="text"
-              placeholder="Write your max speed range"
+              placeholder="Write the max speed range"
               name="range"
               value={formData.range}
               className="p-5 bg-transparent outline-2 outline-gray-400 outline-none rounded"

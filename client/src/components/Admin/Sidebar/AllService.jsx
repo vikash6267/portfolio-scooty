@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { getAllServices,deleteService } from "../../../services/operations/admin";
+import {
+  getAllServices,
+  deleteService,
+} from "../../../services/operations/admin";
 import Servicetable from "./Servicetable";
 const AllService = () => {
   const [service, setServices] = useState([]);
@@ -10,40 +13,32 @@ const AllService = () => {
 
       // console.log(result);
 
-
       if (result) {
-        setServices(result)
+        setServices(result);
       }
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-
-
   const deletOffer = async (scootyId) => {
     try {
       await deleteService(scootyId);
       const updatedOffers = service.filter((ser) => ser._id !== scootyId);
-      setOffers(updatedOffers);
+      setServices(updatedOffers);
     } catch (error) {
       console.error("Failed to delete Services: ", error);
     }
   };
-  
-  return <div>
 
-  <div>
-
-
-
+  return (
     <div>
-
-    <Servicetable data={service} onDelete={deletOffer} />
-
+      <div>
+        <div>
+          <Servicetable data={service} onDelete={deletOffer} />
+        </div>
+      </div>
     </div>
-  </div>
-
-  </div>;
+  );
 };
 
 export default AllService;
