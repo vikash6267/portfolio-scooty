@@ -51,7 +51,11 @@ const Navbar = () => {
             <li>
               <button
                 className=" ml-2 bg-black p-1 px-2 rounded-md hover:scale-105 transition-all duration-300"
-                onClick={() => setIsOpen(true)}
+                onClick={() => {setIsOpen(true)
+                setIsMenuOpen(false)
+                }
+                
+                }
               >
                 Become A DealrShip
               </button>
