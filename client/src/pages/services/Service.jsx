@@ -17,10 +17,10 @@ const Service = () => {
   return (
     <>
       <div className=" card main-container ">
-        {service.map((currElem) => (
-          <div className="innerCard">
+        {service?.map((currElem) => (
+          <div className="innerCard" key={currElem._id}>
             <div className="img">
-              <img src={currElem.image} alt="not found" />
+              <img src={currElem?.image} alt="not found" />
             </div>
             <br />
             <br />
@@ -31,8 +31,7 @@ const Service = () => {
             <span className="font-bold">
               Top Speed :
               <span
-                className="text-blue-600
-                "
+                className="text-blue-600  "
               >
                 {currElem.topspeed}
               </span>{" "}

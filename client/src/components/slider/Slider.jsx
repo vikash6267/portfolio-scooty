@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-
-import one from "../../../public/assests/1.jpg"
-import two from "../../../public/assests/2.jpg"
+import { escootySliderData } from "../../constant/sliderData";
 
 const Slider = () => {
+  useEffect(()=>{
+console.log(escootySliderData)
+  },[])
   return (
-    <div className=" w-screen h-screen">
+    <div className=" w-screen ">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         // style={{ width: "100vw !important" }} 
@@ -27,32 +28,46 @@ const Slider = () => {
             slidesPerView: 1,
           },
         }}
-        className="w-screen "
-      >
-        <SwiperSlide >
-          <img
-            src={one}
-            alt="not found"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src={two}
-            alt="not found"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://wroleyelectricscooter.in/assets/images/about-1.png"
-            alt="not found"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://wroleyelectricscooter.in/assets/images/e-scooter-transformed.png"
-            alt="not found"
-          />
-        </SwiperSlide>
+        className="w-screen z-20  "
+      ><div>
+        {
+          escootySliderData.map((scooty)=>{
+            return(
+              
+            <SwiperSlide key={scooty.id} className="w-full relative">
+
+<div className="  ">
+      <img
+        className=" ]  "
+        src={scooty.image}
+        alt={"hello"}
+       
+      />
+    </div>
+
+    <div className=" absolute top-0 right-0 w-ful h-full flex items-center  flex-col mt-10">
+
+<div className=" lg:w-[50%] w-[60%] text-center flex flex-col gap-5 ">
+<div className=" flex w-full justify-center">
+<p className="  lg:text-2xl  shadow-2xl shadow-amber-300 font-bold p-2 rounded"> {scooty.title}</p>
+
+</div>
+<div className=" flex w-full justify-center">
+<p className=" lg:text-2xl  shadow-2xl shadow-amber-300 font-bold p-2 rounded"> {scooty.desc}</p>
+
+</div>
+</div>
+
+
+    </div>
+
+
+</SwiperSlide>
+
+            )
+          })
+        }
+      </div>
       </Swiper>
     </div>
   );
