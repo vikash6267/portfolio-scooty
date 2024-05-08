@@ -4,6 +4,10 @@ import Slider from "../../components/slider/Slider";
 import { Slide } from "react-awesome-reveal";
 import Info from "./Info"
 import Compare from "./Compare";
+import one from "../../../public/assests/about.png"
+import WroleySupport from "./WroleySupport";
+import Footer from "../../components/footer/Footer";
+
 const Home = () => {
   return (
     <>
@@ -17,7 +21,8 @@ const Home = () => {
           <Slide direction="left">
             <div className="hero-first">
               <img
-                src="https://static.wixstatic.com/media/298fd7_b8678a927a0f4c4d90c3d0193a5032b4~mv2.gif"
+                src={one}
+                className=" rotate-12 shadow-2xl"
                 alt=""
               />
             </div>
@@ -102,19 +107,28 @@ const Home = () => {
 
         </div>
       </div>
+      <div className=" mt-5">
+        <Slide direction="left">
+            <WroleySupport />
+          </Slide>
+        </div>
+
 
       <div >
-        <Slide direction="left">
+        <Slide direction="right">
             <Info />
           </Slide>
         </div>
 
 
         <div >
-        <Slide direction="right">
+        <Slide direction="left">
             <Compare />
           </Slide>
         </div>
+
+      <Footer />
+
     </>
   );
 };

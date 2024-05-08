@@ -1,6 +1,7 @@
 import React from "react";
 import { Slide } from "react-awesome-reveal";
 import "./about.css";
+import Footer from "../../components/footer/Footer";
 
 const About = () => {
   return (
@@ -46,6 +47,8 @@ const About = () => {
           </Slide>
         </div>
       </div>
+      <Footer />
+
     </>
   );
 };

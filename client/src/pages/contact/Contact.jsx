@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
 import "./contact.css";
 import { contactUsForm } from "../../services/operations/admin";
-
+import Footer from "../../components/footer/Footer";
 const Contact = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -121,6 +121,7 @@ const Contact = () => {
       <br />
       <br />
       <br />
+      <Footer />
     </>
   );
 };

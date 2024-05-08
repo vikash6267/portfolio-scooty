@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAllServices } from "../../services/operations/admin";
 import { Link } from "react-router-dom";
-
+import Footer from "../../components/footer/Footer";
 const Service = () => {
   const [service, setServices] = useState([]);
 
@@ -51,6 +51,7 @@ const Service = () => {
           </div>
         ))}
       </div>
+      <Footer></Footer>
     </>
   );
 };

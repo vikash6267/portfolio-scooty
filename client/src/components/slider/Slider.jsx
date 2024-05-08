@@ -45,7 +45,7 @@ console.log(escootySliderData)
       />
     </div>
 
-    <div className=" absolute top-0 right-0 w-ful h-full flex items-center  flex-col mt-10">
+    {/* <div className=" absolute top-0 right-0 w-ful h-full flex items-center  flex-col mt-10">
 
 <div className=" lg:w-[50%] w-[60%] text-center flex flex-col gap-5 ">
 <div className=" flex w-full justify-center">
@@ -59,7 +59,7 @@ console.log(escootySliderData)
 </div>
 
 
-    </div>
+    </div> */}
 
 
 </SwiperSlide>

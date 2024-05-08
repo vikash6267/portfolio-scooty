@@ -1,7 +1,7 @@
 import one from "../../public/assests/4.jpg"
-import two from "../../public/assests/2.png"
+import two from "../../public/assests/2.jpg"
 import thre from "../../public/assests/3.png"
-import four from "../../public/assests/1.png"
+import four from "../../public/assests/1.jpg"
 
 
 export const escootySliderData = [
@@ -18,12 +18,12 @@ export const escootySliderData = [
       title: "Eco-Friendly E-Scooter",
       desc: "Eco-Friendly E-Scooter - Description for an eco-friendly e-scooter. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
-    {
-      id: 3,
-      image: thre,
-      title: "Compact Electric Scooty",
-      desc: "Compact Electric Scooty - Description for a compact electric scooty. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
+    // {
+    //   id: 3,
+    //   image: thre,
+    //   title: "Compact Electric Scooty",
+    //   desc: "Compact Electric Scooty - Description for a compact electric scooty. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    // },
     {
       id: 4,
       image: four,

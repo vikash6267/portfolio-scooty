@@ -28,6 +28,10 @@ const Footer = () => {
             <Link className="link" to="/contact">
               Contact Us
             </Link>
+            <Link className="link" to="/admin/login">
+              Admin Login
+            </Link>
+
           </div>
           <div className="third">
             <h3>Head Office</h3>

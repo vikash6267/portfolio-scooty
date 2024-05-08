@@ -10,7 +10,7 @@ import Footer from "./components/footer/Footer";
 import Scroll from "./components/scrollbar/Scroll";
 import Contact from "./pages/contact/Contact";
 import Service from "./pages/services/Service";
-
+import About from "./pages/about/About"
 //Admin Routes
 import Login from "./components/Admin/Login";
 import Download from "./components/Admin/Sidebar/Download";
@@ -30,7 +30,7 @@ const App = () => {
         <Route path="/service" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/service" element={<Service />} />
-        <Route path="/compare" element={<Compare />} />
+        <Route path="/about" element={<About />} />
 
         <Route
           path="/admin/login"
@@ -93,7 +93,6 @@ const App = () => {
         </Route>
       </Routes>
       <Scroll />
-      <Footer />
     </BrowserRouter>
   );
 };
