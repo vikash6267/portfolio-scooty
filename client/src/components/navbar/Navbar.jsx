@@ -16,7 +16,7 @@ const Navbar = () => {
  
   return (
     <nav className="navbar relative">
-      <div className="navbar-container">
+      <div className="navbar-container ">
         <img
           src="https://wroleyelectricscooter.in/assets/images/logo.png"
           alt="not found"

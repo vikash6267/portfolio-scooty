@@ -10,6 +10,7 @@ export const escootySliderData = [
       image: one,
       title: "E-Scooty Model 1",
       desc: "Description for E-Scooty Model 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      
     },
     {
       id: 2,
