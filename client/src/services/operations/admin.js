@@ -14,7 +14,8 @@ const {
   ALL_SERVICE_SCOOTY,
   DELETE_SCOOTY,
   DELETE_SERIVICE,
-  GET_ALL_SERVICE_SCOOTY
+  GET_ALL_SERVICE_SCOOTY,
+  ENQUIRY_API
 
 } = endpoints
 
@@ -171,7 +172,7 @@ export const getAllServices = async () => {
 export const deleteOffer = async (scootyId) => {
   const toastId = toast.loading("Loading...")
   try {
-    const response = await apiConnector("DELETE", DELETE_SCOOTY, {scootyId})
+    const response = await apiConnector("DELETE", DELETE_SCOOTY, { scootyId })
     // console.log("DELETE SECTION API RESPONSE............", response)
     if (!response?.data?.success) {
       throw new Error("Could Not Delete Offer")
@@ -187,7 +188,7 @@ export const deleteOffer = async (scootyId) => {
 export const deleteService = async (scootyId) => {
   const toastId = toast.loading("Loading...")
   try {
-    const response = await apiConnector("DELETE", DELETE_SERIVICE, {scootyId})
+    const response = await apiConnector("DELETE", DELETE_SERIVICE, { scootyId })
     // console.log("DELETE SECTION API RESPONSE............", response)
     if (!response?.data?.success) {
       throw new Error("Could Not Delete Offer")
@@ -210,11 +211,11 @@ export const deleteService = async (scootyId) => {
 
 //normal operations for client 
 
-export const contactUsForm = async () => {
+export const contactUsForm = async (data) => {
   const toastId = toast.loading("Loading...")
 
   try {
-    const response = await apiConnector("POST", CONTACT_US_API);
+    const response = await apiConnector("POST", CONTACT_US_API, data);
 
     console.log('Response:', response);
 
@@ -223,6 +224,29 @@ export const contactUsForm = async () => {
     }
 
     toast.success("Send Query Successful")
+
+  } catch (err) {
+    console.error('Error:', err);
+    // Handle error
+    toast.error('Technical issue please try again later');
+  }
+  toast.dismiss(toastId)
+
+};
+
+export const enquiryForm = async (data) => {
+  const toastId = toast.loading("Loading...")
+
+  try {
+    const response = await apiConnector("POST", ENQUIRY_API, data);
+
+    console.log('Response:', response);
+
+    if (!response.data.success) {
+      throw new Error(response.data.message)
+    }
+
+    toast.success("Enuery Send  Successful")
 
   } catch (err) {
     console.error('Error:', err);

@@ -1,11 +1,11 @@
 const { contactUsEmail } = require("../template/contactFormRes")
-const{ distibutorEmail } = require("../template/distibutorForm")
+const { distibutorEmail } = require("../template/distibutorForm")
 const mailSender = require("../utils/mailSender")
 const User = require("../model/user")
 
 
 exports.contactUsController = async (req, res) => {
-  const { email, firstname, message,contact } = req.body
+  const { email, firstname, message, contact } = req.body
   // console.log(req.body)
   try {
     const emailRes = await mailSender(
@@ -14,10 +14,10 @@ exports.contactUsController = async (req, res) => {
       contactUsEmail(email, contact, firstname, message)
     )
 
-  const newU =   await User.create({
-      email, firstname, message,contact
+    const newU = await User.create({
+      email, firstname, message, contact
     })
-console.log(newU)
+    console.log(newU)
 
 
 
@@ -49,7 +49,7 @@ exports.distributor = async (req, res) => {
     )
 
 
-   
+
     // console.log("Email Res ", emailRes)
     return res.json({
       success: true,

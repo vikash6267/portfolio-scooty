@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { IoMdClose } from 'react-icons/io';
-import { FaHeart } from 'react-icons/fa';
+import React, { useState } from "react";
+import { IoMdClose } from "react-icons/io";
+import { FaHeart } from "react-icons/fa";
+import { enquiryForm } from "../../services/operations/admin";
 
-function Dialog({setIsOpen}) {
+function Dialog({ setIsOpen }) {
   const [formData, setFormData] = useState({
-    name: '',
-    contact: '',
-    location: '',
+    name: "",
+    contact: "",
+    location: "",
   });
 
   const handleOnChange = (e) => {
@@ -19,13 +20,14 @@ function Dialog({setIsOpen}) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formDataToSend = new FormData();
-    formDataToSend.append('name', formData.name);
-    formDataToSend.append('contact', formData.contact);
-    formDataToSend.append('location', formData.location);
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("contact", formData.contact);
+    formDataToSend.append("location", formData.location);
+    enquiryForm(formDataToSend);
     setFormData({
-      name: '',
-      contact: '',
-      location: '',
+      name: "",
+      contact: "",
+      location: "",
     });
   };
 
@@ -35,7 +37,8 @@ function Dialog({setIsOpen}) {
         <div className="p-6">
           <div className="flex items-center justify-center">
             <div className="text-xl text-red-700 flex gap-3">
-              Welcome To Wroley Scooter <FaHeart className="animate-pulse text-2xl" />
+              Welcome To Wroley Scooter{" "}
+              <FaHeart className="animate-pulse text-2xl" />
             </div>
           </div>
           <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
@@ -72,10 +75,10 @@ function Dialog({setIsOpen}) {
           </form>
         </div>
         <button
-          onClick={() => console.log('Close button clicked')}
+          onClick={() => console.log("Close button clicked")}
           className="absolute top-0 right-0 mt-1 mr-1 text-black bg-white rounded-full focus:outline-none"
         >
-          <IoMdClose className="text-2xl" onClick={()=>setIsOpen(false)}/>
+          <IoMdClose className="text-2xl" onClick={() => setIsOpen(false)} />
         </button>
       </div>
     </div>

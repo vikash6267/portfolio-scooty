@@ -1,10 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
 import "./contact.css";
+import { contactUsForm } from "../../services/operations/admin";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+    firstname: "",
+    message: "",
+    contact: "",
+  });
+
+  const handleOnChange = (e) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formDataToSend = new FormData();
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("firstname", formData.firstname);
+    formDataToSend.append("message", formData.message);
+    formDataToSend.append("contact", formData.contact);
+    contactUsForm(formDataToSend);
+    setFormData({
+      email: "",
+      firstname: "",
+      message: "",
+      contact: "",
+    });
+  };
+
   return (
     <>
       <iframe
@@ -52,13 +83,38 @@ const Contact = () => {
         </div>
         <div className="second">
           <h2>Contact With Us!</h2>
-          <form className="form">
+          <form className="form" onSubmit={handleSubmit}>
             <div className="child">
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email" />
+              <input
+                type="text"
+                placeholder="Name"
+                name="firstname"
+                value={formData.firstname}
+                onChange={handleOnChange}
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                value={formData.email}
+                onChange={handleOnChange}
+              />
             </div>
-            <input type="test" placeholder="Phone Number" />
-            <textarea name="" id="" placeholder="Write your message"></textarea>
+            <input
+              type="test"
+              placeholder="Phone Number"
+              name="contact"
+              value={formData.contact}
+              onChange={handleOnChange}
+            />
+            <textarea
+              id=""
+              placeholder="Write your message"
+              name="message"
+              value={formData.message}
+              onChange={handleOnChange}
+            ></textarea>
+            <button className="btn-grad flex ">Contact US</button>
           </form>
         </div>
       </div>
