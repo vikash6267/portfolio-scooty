@@ -17,6 +17,7 @@ import AddService from "./components/Admin/Sidebar/AddService";
 import AllOffer from "./components/Admin/Sidebar/AllOffer";
 import AllService from "./components/Admin/Sidebar/AllService";
 import Service from "./pages/services/Service";
+import About from "./pages/about/About";
 const App = () => {
   const { token } = useSelector((state) => state.auth);
 
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/service" element={<Service />} />
+        <Route path="/about" element={<About />} />
 
         <Route
           path="/admin/login"
