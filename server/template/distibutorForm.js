@@ -84,7 +84,7 @@ exports.distibutorEmail = (
                 <p>Here are the details Distibutor provided:</p>
                 <p>Name: ${name}</p>
                 <p>Contact: ${contact}</p>
-                <p>Message: ${location}</p>
+                <p>Location: ${location}</p>
               
             </div>
             

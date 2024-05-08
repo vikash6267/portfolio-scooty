@@ -2,7 +2,8 @@ import React from "react";
 import "./home.css";
 import Slider from "../../components/slider/Slider";
 import { Slide } from "react-awesome-reveal";
-
+import Info from "./Info"
+import Compare from "./Compare";
 const Home = () => {
   return (
     <>
@@ -93,8 +94,27 @@ const Home = () => {
               />
             </div>
           </Slide>
+
+
+
+       
+
+
         </div>
       </div>
+
+      <div >
+        <Slide direction="left">
+            <Info />
+          </Slide>
+        </div>
+
+
+        <div >
+        <Slide direction="right">
+            <Compare />
+          </Slide>
+        </div>
     </>
   );
 };

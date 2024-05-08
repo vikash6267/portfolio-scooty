@@ -9,6 +9,8 @@ import Dashboard from "./components/Admin/Sidebar/Dashboard";
 import Footer from "./components/footer/Footer";
 import Scroll from "./components/scrollbar/Scroll";
 import Contact from "./pages/contact/Contact";
+import Service from "./pages/services/Service";
+
 //Admin Routes
 import Login from "./components/Admin/Login";
 import Download from "./components/Admin/Sidebar/Download";
@@ -16,7 +18,7 @@ import AddOffer from "./components/Admin/Sidebar/AddOffer";
 import AddService from "./components/Admin/Sidebar/AddService";
 import AllOffer from "./components/Admin/Sidebar/AllOffer";
 import AllService from "./components/Admin/Sidebar/AllService";
-import Service from "./pages/services/Service";
+import Compare from "./pages/home/Compare";
 const App = () => {
   const { token } = useSelector((state) => state.auth);
 
@@ -28,6 +30,7 @@ const App = () => {
         <Route path="/service" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/service" element={<Service />} />
+        <Route path="/compare" element={<Compare />} />
 
         <Route
           path="/admin/login"
