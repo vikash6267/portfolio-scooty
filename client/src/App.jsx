@@ -10,7 +10,7 @@ import Footer from "./components/footer/Footer";
 import Scroll from "./components/scrollbar/Scroll";
 import Contact from "./pages/contact/Contact";
 import Service from "./pages/services/Service";
-import About from "./pages/about/About"
+import About from "./pages/about/About";
 //Admin Routes
 import Login from "./components/Admin/Login";
 import Download from "./components/Admin/Sidebar/Download";
@@ -19,6 +19,7 @@ import AddService from "./components/Admin/Sidebar/AddService";
 import AllOffer from "./components/Admin/Sidebar/AllOffer";
 import AllService from "./components/Admin/Sidebar/AllService";
 import Compare from "./pages/home/Compare";
+import Whatsapp from "./components/whatsapp/Whatsapp";
 const App = () => {
   const { token } = useSelector((state) => state.auth);
 
@@ -92,6 +93,7 @@ const App = () => {
           />
         </Route>
       </Routes>
+      <Whatsapp />
       <Scroll />
     </BrowserRouter>
   );

@@ -24,7 +24,7 @@ const Scroll = () => {
   return (
     <div>
       {isVisible && (
-        <button className="scroll-to-top-button" onClick={scrollToTop}>
+        <button className="scroll-to-top-button " onClick={scrollToTop}>
           <FaArrowUp size={20} />
         </button>
       )}

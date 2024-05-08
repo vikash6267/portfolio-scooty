@@ -61,10 +61,14 @@ body {
   transition: transform 0.3s ease;
 }
 .img:hover img {
-  transform: scale(1.1); /* Scale the image up by 10% on hover */
+  transform: scale(1.1);
 }
 
 @media (max-width: 767px) {
+  body {
+    font-size: 15px;
+    line-height: normal;
+  }
   .card {
     display: flex;
     flex-wrap: wrap;
@@ -72,6 +76,9 @@ body {
   }
   .innerCard {
     width: 350px !important;
+  }
+  .main-container {
+    width: 80%;
   }
 }
 
