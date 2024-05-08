@@ -49,16 +49,12 @@ const Navbar = () => {
             </li>
 
             <li>
-            <button
-  className="ml-2 bg-black p-1 px-2 rounded-md hover:scale-105 transition-all duration-300"
-  onClick={() => {
-    setIsOpen(true); // This line sets isOpen state to true
-    setIsMenuOpen(false);    // This line calls toggleMenu function
-  }}
->
-  Become A DealerShip
-</button>
-
+              <button
+                className=" ml-2 bg-black p-1 px-2 rounded-md hover:scale-105 transition-all duration-300"
+                onClick={() => setIsOpen(true)}
+              >
+                Become A DealrShip
+              </button>
             </li>
           </ul>
         </Slide>
