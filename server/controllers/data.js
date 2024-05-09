@@ -22,6 +22,7 @@ exports.exportToExcel = async (req, res) => {
       // Add more columns as needed
     ];
 
+    // console.log(users)
     // Populate worksheet with user data
     users.forEach(user => {
       worksheet.addRow({

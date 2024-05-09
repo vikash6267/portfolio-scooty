@@ -3,6 +3,9 @@ import { NavLink, useLocation, matchPath, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import { FaBars } from "react-icons/fa";
+import { IoIosAdd } from "react-icons/io";
+import { MdOutlineProductionQuantityLimits } from "react-icons/md";
+
 
 // import { sidebarLinks } from "./sidebarlinks";
 
@@ -28,19 +31,19 @@ function Sidebar() {
       id: 3,
       name: "Add Service",
       path: "/admin/add-service",
-      icon: <GiScooter />,
+      icon: <IoIosAdd />,
     },
     {
       id: 4,
       name: "All Offers",
       path: "/admin/all-offers",
-      icon: <BiSolidOffer />,
+      icon: <GiScooter />,
     },
     {
       id: 5,
       name: "All Services",
       path: "/admin/all-service",
-      icon: <BiSolidOffer />,
+      icon: <MdOutlineProductionQuantityLimits />,
     },
   ];
 
@@ -79,7 +82,9 @@ function Sidebar() {
           damping: 12,
         },
       }}
-      className="flex flex-col border-r-[1px] border-r-richblack-700 min-h-[calc(100vh-4rem)]   pt-3 gap-10 bg-red-400"
+      // className="flex flex-col border-r-[1px]  min-h-[calc(100vh-4rem)]   pt-3 gap-10 bg-gradient-to-b "
+      className="flex flex-col border-r-[1px] min-h-[calc(100vh-4rem)] pt-3 gap-10 bg-gradient-to-b from-blue-500 to-green-500"
+
     >
       <div className="flex items-center justify-between text-2xl leading-0 px-2 h-8">
         <AnimatePresence>
@@ -99,7 +104,7 @@ function Sidebar() {
                   width={50}
                   className=" rounded-full"
                 />{" "}
-                EV
+              {/* Wroley Scooter */}
               </div>
             </motion.h1>
           )}
@@ -117,11 +122,11 @@ function Sidebar() {
               to={link.path}
               key={link.id}
               onClick={() => setIsOpen(false)}
-              className={`" flex text-black font-mulish items-center gap-2 px-2 py-0 hover:border-r-4 hover:bg-blue-600 hover:transition hover:ease-in-expo " ${
+              className={`" flex text-black font-serif items-center gap-2 px-2 py-0 hover:border-r-4 hover:bg-blue-600 hover:transition hover:ease-in-expo " ${
                 matchRoute(link?.path) && "bg-pink-400 "
               }`}
             >
-              <div title={link.name} className=" text-2xl text-yellow-300">
+              <div title={link.name} className=" text-2xl text-white font-bold">
                 {link.icon}
               </div>
               <AnimatePresence>
