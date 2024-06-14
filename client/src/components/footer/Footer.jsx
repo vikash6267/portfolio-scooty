@@ -38,8 +38,8 @@ const Footer = () => {
             <span>LOCATION:</span>
             <p>L-2/103 S/F office Mahavir Nagar Extension, New Delhi, 110018</p>
             <span>EMAIL US:</span>
-            <a href="mailto:info@wroleyelectricscooter.in">
-              info@wroleyelectricscooter.in
+            <a href="mailto:info@wroleyelectricscooter.com">
+              info@wroleyelectricscooter.com
             </a>
           </div>
         </footer>

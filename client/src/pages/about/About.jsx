@@ -40,9 +40,14 @@ const About = () => {
                 on the journey to a sustainable and smarter Delhi.
               </p>
               <div className="hero-div">
-                <p>Call For New Electric Scooter</p>
-                <h2>+91-9891780956</h2>
-              </div>
+  <p>Call For New Electric Scooter</p>
+  <h2>+91-9891780956</h2>
+  <p>Email :</p>
+  <h2>
+    <a href="mailto:info@wroleyelectricscooter.com">info@wroleyelectricscooter.com</a>
+  </h2>
+</div>
+
             </div>
           </Slide>
         </div>
