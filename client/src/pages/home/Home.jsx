@@ -7,6 +7,8 @@ import Compare from "./Compare";
 import one from "../../../public/assests/about.png"
 import WroleySupport from "./WroleySupport";
 import Footer from "../../components/footer/Footer";
+import offer from "../../../public/assests/offer/offer.jpg"
+import HighlightBanner from "./HighlistBanner";
 
 const Home = () => {
   return (
@@ -14,15 +16,42 @@ const Home = () => {
       <Slider />
       <div className="main-container">
         <marquee className="marq" direction="left" loop="">
-          <div className=" lg:text-2xl md:text-2xl xl:lg:text-2xl text-sm">New Year 2024 Offer 100%* Cashback</div>
+          <div className=" lg:text-2xl md:text-2xl xl:lg:text-2xl text-sm">100% Cashback For Customer After 36 Months</div>
         </marquee>
+
+
+    <div className="flex flex-wrap w-full lg:gap-0 md:gap-0 mt-[50px] " >
+    <Slide direction="right" className="lg:w-[50%] md:w-[50%] w-full lg:mb-0  md:mb-0 mb-[50px]">
+<div className="lg:h-[70%] flex justify-center ">
+<img src={offer} alt="" className=" h-full" />
+</div>
+</Slide>
+
+
+        <Slide direction="left" className="lg:w-[45%] md:w-[50%] w-full">
+{/* //Oferr */}
+<div className="offer-section bg-blue-300 text-center py-4">
+          <h2 className="text-3xl font-bold">Monsoon Offer</h2>
+          <p className="text-xl mt-2">25000 में इलेक्ट्रिक स्कूटर खरीदने का मौका पाएं</p>
+          <p className="text-xl mt-2">संपर्क करें 9064801081 पर</p>
+          <p className="text-xl mt-2">हमारे शोरूम में अवश्य पधारें</p>
+          <p className="text-xl mt-2">Wroley Electric Scooter Showroom, Dulla Jot Dudh Get, Khoribari, Near Paanitanki Nepal Border</p>
+          <p className="text-xl mt-2">यह ऑफर 15 जून 2024 से 22 जून 2024 तक वैध है</p>
+          <p className="text-xl mt-2">Terms and Conditions Apply</p>
+        </div>
+
+</Slide>
+
+    </div>
+
+    <HighlightBanner />
 
         <div className="here-section">
           <Slide direction="left">
             <div className="hero-first">
               <img
                 src={one}
-                className=" rotate-12 shadow-2xl"
+                className="rotate-12 shadow-2xl"
                 alt=""
               />
             </div>
@@ -99,36 +128,28 @@ const Home = () => {
               />
             </div>
           </Slide>
-
-
-
-       
-
-
         </div>
       </div>
-      <div className=" mt-5">
+
+      <div className="mt-5">
         <Slide direction="left">
-            <WroleySupport />
-          </Slide>
-        </div>
+          <WroleySupport />
+        </Slide>
+      </div>
 
-
-      <div >
+      <div>
         <Slide direction="right">
-            <Info />
-          </Slide>
-        </div>
+          <Info />
+        </Slide>
+      </div>
 
-
-        <div >
+      <div>
         <Slide direction="left">
-            <Compare />
-          </Slide>
-        </div>
+          <Compare />
+        </Slide>
+      </div>
 
       <Footer />
-
     </>
   );
 };
