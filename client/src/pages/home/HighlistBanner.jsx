@@ -8,7 +8,10 @@ const HighlightBanner = () => {
         Dealer & Sub-Dealer Requirements in West Bengal
       </h2>
       <p className="lg:text-2xl font-semibold mb-4">
-        Covering All Districts!
+      Coverage all districts West Bengal India and every block
+      </p>
+      <p className="lg:text-xl font-semibold mb-4">
+      High Speed + Low Speed
       </p>
       <p className="text-xl mb-4">
         Your Investment Just Doubled!

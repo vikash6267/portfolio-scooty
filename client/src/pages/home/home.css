@@ -82,3 +82,47 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+
+
+
+
+/* Home.css */
+.offer-section {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.scrolling-text {
+  position: absolute;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.scrolling-text h2,
+.scrolling-text p {
+  display: inline-block;
+  background: linear-gradient(90deg, #f33d0f, #7baffe); /* Adjust colors as needed */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  letter-spacing: 4px;
+  margin: 0;
+  padding: 0 2rem;
+  animation: scroll-left 7s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(50%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}

@@ -30,14 +30,25 @@ const Home = () => {
 
         <Slide direction="left" className="lg:w-[45%] md:w-[50%] w-full">
 {/* //Oferr */}
-<div className="offer-section bg-blue-300 text-center py-4">
-          <h2 className="text-3xl font-bold">Monsoon Offer</h2>
+
+<div className="offer-section bg-blue-300 text-center py-4 bg-gradient-to-r from-yellow-400 to-yellow-500">
+
+<div className="scrolling-text"> 
+
+<h2 className="text-xl font-bold"> Offer Offer Offer </h2>
+
+</div>
+         
+
+         <div className=" my-[50px]">
+         <h1 className="text-3xl font-bold">Monsoon Offer</h1>
           <p className="text-xl mt-2">25000 में इलेक्ट्रिक स्कूटर खरीदने का मौका पाएं</p>
           <p className="text-xl mt-2">संपर्क करें 9064801081 पर</p>
           <p className="text-xl mt-2">हमारे शोरूम में अवश्य पधारें</p>
           <p className="text-xl mt-2">Wroley Electric Scooter Showroom, Dulla Jot Dudh Get, Khoribari, Near Paanitanki Nepal Border</p>
           <p className="text-xl mt-2">यह ऑफर 15 जून 2024 से 22 जून 2024 तक वैध है</p>
           <p className="text-xl mt-2">Terms and Conditions Apply</p>
+         </div>
         </div>
 
 </Slide>

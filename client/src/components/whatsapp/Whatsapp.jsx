@@ -3,7 +3,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import "./whatsapp.css";
 const Whatsapp = () => {
   const handleClick = () => {
-    const phoneNumber = "+919009594537";
+    const phoneNumber = "+919064801081 ";
 
     const message = encodeURIComponent("Hello! Wroley Scooter");
 
