@@ -11,7 +11,7 @@ const HighlightBanner = () => {
       Coverage all districts West Bengal India and every block
       </p>
       <p className="lg:text-xl font-semibold mb-4">
-      High Speed + Low Speed
+      High Speed + Low Speed (Electric Scooter Price Rs. 81000/-, Rs. 79000/-)
       </p>
       <p className="text-xl mb-4">
         Your Investment Just Doubled!
