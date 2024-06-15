@@ -1,9 +1,8 @@
 
-
-const BASE_URL = "https://portfolio-scooty.onrender.com/api/v1"
+const BASE_URL = import.meta.env.VITE_APP_BASE_URL;
 
 export const endpoints = {
-  LOGIN_API: "https://portfolio-scooty.onrender.com/api/v1/user/admin",
+  LOGIN_API: BASE_URL + "/user/admin",
   DOWNLOAD_API: BASE_URL + "/user/download",
   CONTACT_US_API: BASE_URL + "/reach/contact",
   ADD_OFFER_API: BASE_URL + "/scooty/createScooty",
