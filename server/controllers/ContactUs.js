@@ -43,7 +43,7 @@ exports.distributor = async (req, res) => {
   console.log(req.body)
   try {
     const emailRes = await mailSender(
-      "vikasmaheshwari6267@gmail.com",
+      "info@wroleyelectricscooter.com",
       "Recived new distributor mail ",
       distibutorEmail(name, location, contact)
     )

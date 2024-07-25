@@ -2,6 +2,7 @@ import React from "react";
 import { Slide } from "react-awesome-reveal";
 import "./about.css";
 import Footer from "../../components/footer/Footer";
+import one from "../../image/e1.jpg"
 
 const About = () => {
   return (
@@ -11,7 +12,7 @@ const About = () => {
           <Slide direction="left">
             <div className="hero-first">
               <img
-                src="https://static.wixstatic.com/media/298fd7_b8678a927a0f4c4d90c3d0193a5032b4~mv2.gif"
+                src={one}
                 alt=""
               />
             </div>
@@ -41,7 +42,7 @@ const About = () => {
               </p>
               <div className="hero-div">
   <p>Call For New Electric Scooter</p>
-  <h2>+91-9891780956</h2>
+  <h2> 92896 15376</h2>
   <p>Email :</p>
   <h2>
     <a href="mailto:info@wroleyelectricscooter.com">info@wroleyelectricscooter.com</a>

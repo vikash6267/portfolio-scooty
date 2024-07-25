@@ -4,7 +4,8 @@ import Slider from "../../components/slider/Slider";
 import { Slide } from "react-awesome-reveal";
 import Info from "./Info"
 import Compare from "./Compare";
-import one from "../../../public/assests/about.png"
+import one from "../../image/e1.jpg"
+import two from "../../image/e4.jpg"
 import WroleySupport from "./WroleySupport";
 import Footer from "../../components/footer/Footer";
 import offer from "../../../public/assests/offer/offer.jpg"
@@ -71,10 +72,10 @@ const Home = () => {
 
         <div className="here-section">
           <Slide direction="left">
-            <div className="hero-first">
+            <div className="hero-first h-[600px]">
               <img
                 src={one}
-                className="rotate-12 shadow-2xl"
+                className="object-cover"
                 alt=""
               />
             </div>
@@ -106,7 +107,7 @@ const Home = () => {
               </p>
               <div className="hero-div">
                 <p>Call For New Electric Scooter</p>
-                <h2>+91-9891780956</h2>
+                <h2> 92896 15376</h2>
               </div>
             </div>
           </Slide>
@@ -146,7 +147,7 @@ const Home = () => {
           <Slide direction="right">
             <div className="hero-first">
               <img
-                src="https://thumbs.dreamstime.com/b/why-choose-us-symbol-concept-word-beautiful-white-paper-orange-table-background-business-motivational-copy-space-299736448.jpg"
+              src={two}
                 alt=""
               />
             </div>

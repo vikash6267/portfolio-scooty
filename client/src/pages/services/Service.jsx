@@ -29,7 +29,7 @@ const Service = () => {
             <br />
             <br />
             <span className="font-bold text-xl whitespace-wrap">
-              {/* {currElem.description} */}
+              {currElem.title}
             </span>
             <span className="text-red-400 font-bold ">{currElem.color}</span>
             <span className="font-bold">

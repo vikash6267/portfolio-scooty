@@ -69,7 +69,7 @@ const Contact = () => {
               <MdEmail />
             </div>
             <span>
-              L-2/103 S/F office Mahavir Nagar Extension, New Delhi, 110018
+            info@wroleyelectricscooter.com
             </span>
           </div>
           <div className="icons">
@@ -77,7 +77,7 @@ const Contact = () => {
               <FaPhone />
             </div>
             <span>
-              L-2/103 S/F office Mahavir Nagar Extension, New Delhi, 110018
+            92896 15376
             </span>
           </div>
         </div>

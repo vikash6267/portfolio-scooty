@@ -13,19 +13,17 @@ console.log(escootySliderData)
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         // style={{ width: "100vw !important" }} 
-        spaceBetween={50}
-        slidesPerView={3}
+        // spaceBetween={50}
+        slidesPerView={2}
         navigation
         pagination={{ clickable: true }}
         breakpoints={{
           0: {
             slidesPerView: 1,
           },
-          555: {
-            slidesPerView: 1,
-          },
+        
           788: {
-            slidesPerView: 1,
+            slidesPerView: 2,
           },
         }}
         className="w-screen z-20  "
@@ -36,14 +34,14 @@ console.log(escootySliderData)
               
             <SwiperSlide key={scooty.id} className="w-full relative">
 
-<div className="  ">
-      <img
-        className=" ]  "
-        src={scooty.image}
-        alt={"hello"}
-       
-      />
-    </div>
+            <div className="lg:h-[700px] h-[500px] w-full">
+  <img
+    className="w-full h-full object-cover"
+    src={scooty.image}
+    alt="hello"
+  />
+</div>
+
 
     {/* <div className=" absolute top-0 right-0 w-ful h-full flex items-center  flex-col mt-10">
 
