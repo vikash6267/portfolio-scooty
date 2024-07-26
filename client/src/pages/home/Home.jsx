@@ -107,7 +107,7 @@ const Home = () => {
               </p>
               <div className="hero-div">
                 <p>Call For New Electric Scooter</p>
-                <h2> 92896 15376</h2>
+                <h2> 9891780956</h2>
               </div>
             </div>
           </Slide>

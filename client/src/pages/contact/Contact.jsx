@@ -77,7 +77,7 @@ const Contact = () => {
               <FaPhone />
             </div>
             <span>
-            92896 15376
+            9891780956
             </span>
           </div>
         </div>
