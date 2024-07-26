@@ -1,0 +1,21 @@
+.call-button {
+    position: fixed;
+    bottom: 150px;
+    right: 25px;
+    background-color: rgb(4, 62, 255);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .call-button:hover {
+    background-color: #20354b;
+  }
+  

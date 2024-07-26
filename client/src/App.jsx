@@ -20,6 +20,7 @@ import AllOffer from "./components/Admin/Sidebar/AllOffer";
 import AllService from "./components/Admin/Sidebar/AllService";
 import Compare from "./pages/home/Compare";
 import Whatsapp from "./components/whatsapp/Whatsapp";
+import CallButton from "./components/whatsapp/Calll";
 const App = () => {
   const { token } = useSelector((state) => state.auth);
 
@@ -94,6 +95,7 @@ const App = () => {
         </Route>
       </Routes>
       <Whatsapp />
+      <CallButton />
       <Scroll />
     </BrowserRouter>
   );
