@@ -4,6 +4,8 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 import { Slide } from "react-awesome-reveal";
 import Dialog from "./Dialog";
+import logo from "../../assests/logo.png"
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,8 +18,9 @@ const Navbar = () => {
     <nav className="navbar relative">
       <div className="navbar-container ">
        <Link to="/"> <img
-          src="https://wroleyelectricscooter.in/assets/images/logo.png"
+          src={logo}
           alt="not found"
+          className="rounded-full"
         /></Link>
         <div
           className={`menu-icon ${isMenuOpen ? "open" : ""}`}
