@@ -11,7 +11,7 @@ import WroleySupport from "./WroleySupport";
 import Footer from "../../components/footer/Footer";
 import offer from "../../../public/assests/offer/offer.jpg";
 import HighlightBanner from "./HighlistBanner";
-
+import offers from "../../assests/offer.jpg";
 const Home = () => {
   return (
     <>
@@ -23,7 +23,7 @@ const Home = () => {
           </div>
         </marquee>
 
-        <div className="flex flex-wrap w-full lg:gap-0 md:gap-0 mt-[50px] ">
+        <div className="flex flex-wrap w-full lg:gap-0 md:gap-0 mt-[50px] lg:-mb-48 ">
           <Slide
             direction="right"
             className="lg:w-[50%] md:w-[50%] w-full lg:mb-0  md:mb-0 mb-[50px]"
@@ -81,8 +81,12 @@ const Home = () => {
             </div>
           </Slide>
         </div>
-
         <HighlightBanner />
+
+        <div className="grid lg:grid-cols-2 p-5 gap-5">
+          <img src={offers} alt="not found" />
+          <img src={offers} alt="not found" />
+        </div>
 
         <div className="here-section">
           <Slide direction="left">
