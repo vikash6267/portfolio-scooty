@@ -35,16 +35,24 @@ const Home = () => {
               <img src={offer} alt="" className=" h-full" />
             </div>
           </Slide>
+          <Slide
+            direction="left"
+            className="lg:w-[50%] md:w-[50%] w-full lg:mb-0  md:mb-0 mb-[50px]"
+          >
+            <div className="lg:h-[70%] h-full flex justify-center ">
+              <img src={offer1} alt="" className=" h-full" />
+            </div>
+          </Slide>
 
-          <Slide direction="left" className="lg:w-[45%] md:w-[50%] w-full">
-            {/* //Oferr */}
+          {/* <Slide direction="left" className="lg:w-[45%] md:w-[50%] w-full"> */}
+          {/* //Oferr */}
 
-            <div className="offer-section bg-blue-300 text-center py-4 bg-gradient-to-r from-yellow-400 to-yellow-500">
+          {/* <div className="offer-section bg-blue-300 text-center py-4 bg-gradient-to-r from-yellow-400 to-yellow-500">
               <div className="scrolling-text">
                 <h2 className="text-xl font-bold"> Offer Offer Offer </h2>
-              </div>
+              </div> */}
 
-              <div className="my-8  max-w-xl bg-white rounded-lg shadow-lg overflow-hidden mx-2">
+          {/* <div className="my-8  max-w-xl bg-white rounded-lg shadow-lg overflow-hidden mx-2">
                 <div className="my-8 max-w-xl bg-white rounded-lg shadow-lg overflow-hidden mx-2">
                   <div className="p-4">
                     <h1 className="text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-4">
@@ -52,13 +60,13 @@ const Home = () => {
                     </h1>
                     <p className="text- lg:text-xl text-center text-gray-700 mb-4">
                       Electric Scooter Price: ₹81,000, including GST
-                    </p>
-                    {/* <p className="text-lg lg:text-xl text-center text-gray-700 mb-4">GST amount will be deducted under this scheme.</p> */}
-                    <p className="text- lg:text-xl text-center text-gray-700 mb-4">
+                    </p> */}
+          {/* <p className="text-lg lg:text-xl text-center text-gray-700 mb-4">GST amount will be deducted under this scheme.</p> */}
+          {/* <p className="text- lg:text-xl text-center text-gray-700 mb-4">
                       Receive a <span className="font-bold">32" LED TV</span> 2
                       months after the purchase.
-                    </p>
-                    <p className="text- lg:text-xl text-center text-gray-700 mb-4">
+                    </p> */}
+          {/* <p className="text- lg:text-xl text-center text-gray-700 mb-4">
                       After deducting the GST amount in this scheme, you will{" "}
                       <span className="font-bold">
                         receive 48% after 6 months.
@@ -66,23 +74,23 @@ const Home = () => {
                     </p>
                     <p className="text- lg:text-xl text-center text-gray-700 mb-4">
                       Amount returned by cheque
-                    </p>
-                    {/* <div className="flex justify-center">
+                    </p> */}
+          {/* <div className="flex justify-center">
     <p className="text- lg:text-xl text-center text-gray-700 mb-4">Contact: <span className="font-bold">9064801081</span></p>
   <p className="text- lg:text-xl text-center mb-4 text-yellow-900 font-bold">Visit our showroom:</p>
   <p className="text- lg:text-xl text-center text-gray-700 mb-4">Wroley Electric Scooter Showroom, Dulla Jot Dudh Get, Khoribari, Near Paanitanki Nepal Border</p>
   </div> */}
-                    <p className="text- lg:text-xl text-center text-gray-700 mb-4">
+          {/* <p className="text- lg:text-xl text-center text-gray-700 mb-4">
                       This offer is valid from 15th June 2024 to 22nd June 2024.
                     </p>
                     <p className="text- lg:text-xl text-center text-gray-700 mb-4">
                       Terms and conditions apply.
-                    </p>
-                  </div>
+                    </p> */}
+          {/* </div>
                 </div>
               </div>
             </div>
-          </Slide>
+          </Slide> */}
         </div>
         <HighlightBanner />
 
