@@ -95,10 +95,7 @@ const Home = () => {
         <HighlightBanner />
 
         <div>
-          <p className="text-center font-bold text-3xl">
-            {" "}
-            Mansoon Latest Offers
-          </p>
+          <p className="text-center font-bold text-3xl"> Durga Puja Offers</p>
           <div className="grid lg:grid-cols-4 p-5 gap-5">
             <img
               src={offer1}
@@ -184,7 +181,7 @@ const Home = () => {
             </div>
           </Slide>
           <Slide direction="right">
-            <div className="hero-first h-[86vh]">
+            <div className="hero-first lg:h-[86vh]">
               <img src={banner} alt="" />
             </div>
           </Slide>
