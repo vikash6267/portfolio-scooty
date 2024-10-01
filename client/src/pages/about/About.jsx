@@ -2,7 +2,7 @@ import React from "react";
 import { Slide } from "react-awesome-reveal";
 import "./about.css";
 import Footer from "../../components/footer/Footer";
-import one from "../../image/e1.jpg"
+import one from "../../image/e1.jpg";
 
 const About = () => {
   return (
@@ -11,10 +11,7 @@ const About = () => {
         <div className="here-section">
           <Slide direction="left">
             <div className="hero-first">
-              <img
-                src={one}
-                alt=""
-              />
+              <img src={one} alt="" />
             </div>
           </Slide>
           <Slide direction="right">
@@ -41,20 +38,20 @@ const About = () => {
                 on the journey to a sustainable and smarter Delhi.
               </p>
               <div className="hero-div">
-  <p>Call For New Electric Scooter</p>
-  <h2> 9891780956</h2>
-  <p>Email :</p>
-  <h2>
-    <a href="mailto:info@wroleyelectricscooter.com">info@wroleyelectricscooter.com</a>
-  </h2>
-</div>
-
+                <p>Call For New Electric Scooter</p>
+                <h2> 9891780956</h2>
+                <p>Email :</p>
+                <h2>
+                  <a href="mailto:info@wroleyelectricscooter.com">
+                    info@wroleyelectricscooter.com
+                  </a>
+                </h2>
+              </div>
             </div>
           </Slide>
         </div>
       </div>
       <Footer />
-
     </>
   );
 };

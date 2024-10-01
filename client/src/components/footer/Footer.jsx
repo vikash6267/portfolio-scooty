@@ -12,7 +12,9 @@ const Footer = () => {
           <div className="first">
             <h3>Working Hours</h3>
             <span>TIMINGS:</span>
-            <p>24x7</p>
+            <p>
+              24/7 available number <br /> 9064801081
+            </p>
           </div>
           <div className="second">
             <h3>Quick Links</h3>
@@ -31,7 +33,6 @@ const Footer = () => {
             <Link className="link" to="/admin/login">
               Admin Login
             </Link>
-
           </div>
           <div className="third">
             <h3>Head Office</h3>

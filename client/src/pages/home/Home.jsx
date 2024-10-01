@@ -2,13 +2,14 @@ import React from "react";
 import "./home.css";
 import Slider from "../../components/slider/Slider";
 import { Slide } from "react-awesome-reveal";
-import Info from "./Info"
+import Info from "./Info";
 import Compare from "./Compare";
-import one from "../../image/e1.jpg"
-import two from "../../image/e4.jpg"
+import one from "../../image/e1.jpg";
+// import two from "../../image/e4.jpg";
+import banner from "../../assests/banner.jpg";
 import WroleySupport from "./WroleySupport";
 import Footer from "../../components/footer/Footer";
-import offer from "../../../public/assests/offer/offer.jpg"
+import offer from "../../../public/assests/offer/offer.jpg";
 import HighlightBanner from "./HighlistBanner";
 
 const Home = () => {
@@ -17,67 +18,76 @@ const Home = () => {
       <Slider />
       <div className="main-container">
         <marquee className="marq" direction="left" loop="">
-          <div className=" lg:text-2xl md:text-2xl xl:lg:text-2xl text-sm">100% Cashback For Customer After 36 Months</div>
+          <div className=" lg:text-2xl md:text-2xl xl:lg:text-2xl text-sm">
+            100% Cashback For Customer After 36 Months
+          </div>
         </marquee>
 
+        <div className="flex flex-wrap w-full lg:gap-0 md:gap-0 mt-[50px] ">
+          <Slide
+            direction="right"
+            className="lg:w-[50%] md:w-[50%] w-full lg:mb-0  md:mb-0 mb-[50px]"
+          >
+            <div className="lg:h-[70%] h-full flex justify-center ">
+              <img src={offer} alt="" className=" h-full" />
+            </div>
+          </Slide>
 
-    <div className="flex flex-wrap w-full lg:gap-0 md:gap-0 mt-[50px] " >
-    <Slide direction="right" className="lg:w-[50%] md:w-[50%] w-full lg:mb-0  md:mb-0 mb-[50px]">
-<div className="lg:h-[70%] h-full flex justify-center ">
-<img src={offer} alt="" className=" h-full" />
-</div>
-</Slide>
+          <Slide direction="left" className="lg:w-[45%] md:w-[50%] w-full">
+            {/* //Oferr */}
 
+            <div className="offer-section bg-blue-300 text-center py-4 bg-gradient-to-r from-yellow-400 to-yellow-500">
+              <div className="scrolling-text">
+                <h2 className="text-xl font-bold"> Offer Offer Offer </h2>
+              </div>
 
-        <Slide direction="left" className="lg:w-[45%] md:w-[50%] w-full">
-{/* //Oferr */}
-
-<div className="offer-section bg-blue-300 text-center py-4 bg-gradient-to-r from-yellow-400 to-yellow-500">
-
-<div className="scrolling-text"> 
-
-<h2 className="text-xl font-bold"> Offer Offer Offer </h2>
-
-</div>
-         
-         <div className="my-8  max-w-xl bg-white rounded-lg shadow-lg overflow-hidden mx-2">
-         <div className="my-8 max-w-xl bg-white rounded-lg shadow-lg overflow-hidden mx-2">
-         <div className="p-4">
-  <h1 className="text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-4">Monsoon Offer</h1>
-  <p className="text- lg:text-xl text-center text-gray-700 mb-4">Electric Scooter Price: ₹81,000, including GST</p>
-  {/* <p className="text-lg lg:text-xl text-center text-gray-700 mb-4">GST amount will be deducted under this scheme.</p> */}
-  <p className="text- lg:text-xl text-center text-gray-700 mb-4">Receive a <span className="font-bold">32" LED TV</span> 2 months after the purchase.</p>
-  <p className="text- lg:text-xl text-center text-gray-700 mb-4">After deducting the GST amount in this scheme, you will <span className="font-bold">receive 48% after 6 months.</span></p>
-  <p className="text- lg:text-xl text-center text-gray-700 mb-4">Amount returned by cheque</p>
-  {/* <div className="flex justify-center">
+              <div className="my-8  max-w-xl bg-white rounded-lg shadow-lg overflow-hidden mx-2">
+                <div className="my-8 max-w-xl bg-white rounded-lg shadow-lg overflow-hidden mx-2">
+                  <div className="p-4">
+                    <h1 className="text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-4">
+                      Monsoon Offer
+                    </h1>
+                    <p className="text- lg:text-xl text-center text-gray-700 mb-4">
+                      Electric Scooter Price: ₹81,000, including GST
+                    </p>
+                    {/* <p className="text-lg lg:text-xl text-center text-gray-700 mb-4">GST amount will be deducted under this scheme.</p> */}
+                    <p className="text- lg:text-xl text-center text-gray-700 mb-4">
+                      Receive a <span className="font-bold">32" LED TV</span> 2
+                      months after the purchase.
+                    </p>
+                    <p className="text- lg:text-xl text-center text-gray-700 mb-4">
+                      After deducting the GST amount in this scheme, you will{" "}
+                      <span className="font-bold">
+                        receive 48% after 6 months.
+                      </span>
+                    </p>
+                    <p className="text- lg:text-xl text-center text-gray-700 mb-4">
+                      Amount returned by cheque
+                    </p>
+                    {/* <div className="flex justify-center">
     <p className="text- lg:text-xl text-center text-gray-700 mb-4">Contact: <span className="font-bold">9064801081</span></p>
   <p className="text- lg:text-xl text-center mb-4 text-yellow-900 font-bold">Visit our showroom:</p>
   <p className="text- lg:text-xl text-center text-gray-700 mb-4">Wroley Electric Scooter Showroom, Dulla Jot Dudh Get, Khoribari, Near Paanitanki Nepal Border</p>
   </div> */}
-  <p className="text- lg:text-xl text-center text-gray-700 mb-4">This offer is valid from 15th June 2024 to 22nd June 2024.</p>
-  <p className="text- lg:text-xl text-center text-gray-700 mb-4">Terms and conditions apply.</p>
-</div>
-
-</div>
-
-</div>
-
+                    <p className="text- lg:text-xl text-center text-gray-700 mb-4">
+                      This offer is valid from 15th June 2024 to 22nd June 2024.
+                    </p>
+                    <p className="text- lg:text-xl text-center text-gray-700 mb-4">
+                      Terms and conditions apply.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Slide>
         </div>
 
-</Slide>
-
-    </div>
-
-    <HighlightBanner />
+        <HighlightBanner />
 
         <div className="here-section">
           <Slide direction="left">
             <div className="hero-first h-[600px]">
-              <img
-                src={one}
-                className="object-cover"
-                alt=""
-              />
+              <img src={one} className="object-cover" alt="" />
             </div>
           </Slide>
           <Slide direction="right">
@@ -145,11 +155,8 @@ const Home = () => {
             </div>
           </Slide>
           <Slide direction="right">
-            <div className="hero-first">
-              <img
-              src={two}
-                alt=""
-              />
+            <div className="hero-first h-[86vh]">
+              <img src={banner} alt="" />
             </div>
           </Slide>
         </div>
