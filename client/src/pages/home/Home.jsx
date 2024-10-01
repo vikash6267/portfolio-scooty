@@ -11,7 +11,10 @@ import WroleySupport from "./WroleySupport";
 import Footer from "../../components/footer/Footer";
 import offer from "../../../public/assests/offer/offer.jpg";
 import HighlightBanner from "./HighlistBanner";
-import offers from "../../assests/offer.jpg";
+import offer1 from "../../assests/offer1.jpg";
+import offer2 from "../../assests/offer2.jpg";
+import offer3 from "../../assests/offer3.jpg";
+import offer4 from "../../assests/offer4.jpg";
 const Home = () => {
   return (
     <>
@@ -83,9 +86,23 @@ const Home = () => {
         </div>
         <HighlightBanner />
 
-        <div className="grid lg:grid-cols-2 p-5 gap-5">
-          <img src={offers} alt="not found" />
-          <img src={offers} alt="not found" />
+        <div>
+          <p className="text-center font-bold text-3xl">
+            {" "}
+            Mansoon Latest Offers
+          </p>
+          <div className="grid lg:grid-cols-4 p-5 gap-5">
+            <img
+              src={offer1}
+              alt="not found"
+              className="hover:rotate-90
+            
+            "
+            />
+            <img src={offer2} alt="not found" />
+            <img src={offer3} alt="not found" />
+            <img src={offer4} alt="not found" />
+          </div>
         </div>
 
         <div className="here-section">
