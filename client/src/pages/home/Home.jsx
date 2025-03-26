@@ -76,7 +76,7 @@ const Home = () => {
                       Amount returned by cheque
                     </p> */}
           {/* <div className="flex justify-center">
-    <p className="text- lg:text-xl text-center text-gray-700 mb-4">Contact: <span className="font-bold">9064801081</span></p>
+    <p className="text- lg:text-xl text-center text-gray-700 mb-4">Contact: <span className="font-bold">+91 9891780956</span></p>
   <p className="text- lg:text-xl text-center mb-4 text-yellow-900 font-bold">Visit our showroom:</p>
   <p className="text- lg:text-xl text-center text-gray-700 mb-4">Wroley Electric Scooter Showroom, Dulla Jot Dudh Get, Khoribari, Near Paanitanki Nepal Border</p>
   </div> */}

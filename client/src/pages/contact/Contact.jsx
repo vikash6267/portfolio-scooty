@@ -56,29 +56,52 @@ const Contact = () => {
         <div className="first">
           <h1>Wroley Electric Scooter</h1>
           <p>Get in Touch with Wroley: Your Electric Scooter Solution</p>
-          <div className="icons">
-            <div className="icon">
-              <FaLocationDot />
+          <div className="icons flex items-start">
+            <div class="p-4 border  w-fit">
+              <p class="font-semibold text-lg text-gray-800">Address:</p>
+              <p class="text-gray-700">
+                <span class="font-medium">Floor No.:</span> 3RD FLOOR
+              </p>
+              <p class="text-gray-700">
+                <span class="font-medium">Building No./Flat No.:</span> SHOP NO
+                316, PLOT NO 5
+              </p>
+              <p class="text-gray-700">
+                <span class="font-medium">Name Of Premises/Building:</span> DDA
+                COMMUNITY CENTER RG COMPLEX 2, RG COMPLEX
+              </p>
+              <p class="text-gray-700">
+                <span class="font-medium">Road/Street:</span> SECTOR-14
+              </p>
+              <p class="text-gray-700">
+                <span class="font-medium">Nearby Landmark:</span> NEAR BABUSA
+                ROHINI
+              </p>
+              <p class="text-gray-700">
+                <span class="font-medium">City/Town/Village:</span> New Delhi
+              </p>
+              <p class="text-gray-700">
+                <span class="font-medium">District:</span> North Delhi
+              </p>
+              <p class="text-gray-700">
+                <span class="font-medium">State:</span> Delhi
+              </p>
+              <p class="text-gray-700">
+                <span class="font-medium">PIN Code:</span> 110085
+              </p>
             </div>
-            <span>
-              L-2/103 S/F office Mahavir Nagar Extension, New Delhi, 110018
-            </span>
           </div>
           <div className="icons">
             <div className="icon">
               <MdEmail />
             </div>
-            <span>
-            info@wroleyelectricscooter.com
-            </span>
+            <span>info@wroleyelectricscooter.com</span>
           </div>
           <div className="icons">
             <div className="icon">
               <FaPhone />
             </div>
-            <span>
-            9891780956
-            </span>
+            <span>9891780956</span>
           </div>
         </div>
         <div className="second">

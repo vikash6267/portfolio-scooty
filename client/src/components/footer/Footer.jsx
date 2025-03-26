@@ -13,7 +13,7 @@ const Footer = () => {
             <h3>Working Hours</h3>
             <span>TIMINGS:</span>
             <p>
-              24/7 available number <br /> 9064801081
+              24/7 available number <br /> +91 9891780956
             </p>
           </div>
           <div className="second">
@@ -36,8 +36,40 @@ const Footer = () => {
           </div>
           <div className="third">
             <h3>Head Office</h3>
-            <span>LOCATION:</span>
-            <p>L-2/103 S/F office Mahavir Nagar Extension, New Delhi, 110018</p>
+            <div class="p-4  w-fit">
+              <p class="font-semibold text-lg text-white">Address:</p>
+              <p class="text-white">
+                <span class="font-medium">Floor No.:</span> 3RD FLOOR
+              </p>
+              <p class="text-white">
+                <span class="font-medium">Building No./Flat No.:</span> SHOP NO
+                316, PLOT NO 5
+              </p>
+              <p class="text-white">
+                <span class="font-medium">Name Of Premises/Building:</span> DDA
+                COMMUNITY CENTER RG COMPLEX 2, RG COMPLEX
+              </p>
+              <p class="text-white">
+                <span class="font-medium">Road/Street:</span> SECTOR-14
+              </p>
+              <p class="text-white">
+                <span class="font-medium">Nearby Landmark:</span> NEAR BABUSA
+                ROHINI
+              </p>
+              <p class="text-white">
+                <span class="font-medium">City/Town/Village:</span> New Delhi
+              </p>
+              <p class="text-white">
+                <span class="font-medium">District:</span> North Delhi
+              </p>
+              <p class="text-white">
+                <span class="font-medium">State:</span> Delhi
+              </p>
+              <p class="text-white">
+                <span class="font-medium">PIN Code:</span> 110085
+              </p>
+            </div>
+
             <span>EMAIL US:</span>
             <a href="mailto:info@wroleyelectricscooter.com">
               info@wroleyelectricscooter.com
