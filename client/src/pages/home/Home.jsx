@@ -15,6 +15,7 @@ import offer1 from "../../assests/offer1.jpg";
 import offer2 from "../../assests/offer2.jpg";
 import offer3 from "../../assests/offer3.jpg";
 import offer4 from "../../assests/offer4.jpg";
+import DistributorSection from "./DistributorSection";
 const Home = () => {
   return (
     <>
@@ -92,6 +93,8 @@ const Home = () => {
             </div>
           </Slide> */}
         </div>
+        <DistributorSection />
+
         <HighlightBanner />
 
         <div>
