@@ -5,6 +5,9 @@ export default function DistributorSection() {
     <section className="py-10 px-5 bg-gradient-to-r from-purple-100 via-pink-100 to-yellow-100">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
+        <p className="text-center font-bold text-red-600">
+          Durga Puja dhamaka offer
+        </p>
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">
           Distributor Categories & Special Offers
         </h2>
