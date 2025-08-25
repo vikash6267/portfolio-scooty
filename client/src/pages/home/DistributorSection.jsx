@@ -16,8 +16,8 @@ export default function DistributorSection() {
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {[
             { price: "₹25,00,000", label: "Premium Distributor" },
-            { price: "₹1,50,000", label: "Gold Distributor" },
-            { price: "₹75,000", label: "Silver Distributor" },
+            { price: "₹15,00,000", label: "Gold Distributor" },
+            { price: "₹7,50,000", label: "Silver Distributor" },
           ].map((item, i) => (
             <div
               key={i}
