@@ -93,6 +93,48 @@ const Home = () => {
             </div>
           </Slide> */}
         </div>
+        <div class="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 text-white p-6 rounded-2xl shadow-xl text-center space-y-4">
+          <h2 class="text-3xl font-extrabold flex items-center justify-center gap-2 animate-pulse">
+            🎆 Diwali Dhamaka Offer 🎇
+          </h2>
+
+          <p class="text-lg leading-relaxed">
+            <span class="font-semibold">🚗 Wroley Electric Scooter</span> is
+            offering
+            <span class="font-bold underline">💸 100% Cash Back</span> and along
+            with it, a<span class="font-semibold">📺 32-inch LED Smart TV</span>{" "}
+            as a guaranteed gift! 🎁
+          </p>
+
+          <p class="text-lg">
+            Plus, get an exciting{" "}
+            <span class="font-semibold">🎫 Scratch Coupon</span> — scratch & win
+            <span class="font-bold">₹3,999/- to ₹49,999/-</span> worth of
+            amazing gifts! 💥
+          </p>
+
+          <div class="border-t border-white/40 pt-3">
+            <p class="text-base leading-relaxed">
+              📍{" "}
+              <span class="font-semibold">
+                Wroley Electric Scooter Showroom
+              </span>
+              , Dudhget, Paanitanki (Near Nepal Border)
+              <br />
+              📞 <span class="font-bold">+91 6377154489</span>
+            </p>
+          </div>
+
+          <p class="text-sm italic opacity-90">
+            ⚠️ Conditions Apply — Offer valid on A1 Model worth ₹98,999/-
+            (Including GST)
+          </p>
+
+          <p class="text-xl font-semibold mt-2 animate-bounce">
+            🔥 Offer! Offer! Offer! 🔥
+          </p>
+        </div>
+
         <DistributorSection />
 
         <HighlightBanner />
