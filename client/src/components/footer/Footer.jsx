@@ -13,7 +13,7 @@ const Footer = () => {
             <h3>Working Hours</h3>
             <span>TIMINGS:</span>
             <p>
-              24/7 available number <br /> +91 9891780956
+              24/7 available number <br /> +91 8527662372
             </p>
           </div>
           <div className="second">

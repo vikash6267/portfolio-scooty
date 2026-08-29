@@ -26,12 +26,12 @@
 .hero-first {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 
   & img {
     border-radius: 50px;
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -55,7 +55,6 @@
 .hero-pera {
   letter-spacing: 1px;
   line-height: 28px;
-  text-algin: left;
   text-align: center;
   text-align: justify;
 }

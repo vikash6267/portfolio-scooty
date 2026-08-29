@@ -101,7 +101,7 @@ const Contact = () => {
             <div className="icon">
               <FaPhone />
             </div>
-            <span>9891780956</span>
+            <span>8527662372</span>
           </div>
         </div>
         <div className="second">

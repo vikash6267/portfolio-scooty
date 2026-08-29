@@ -39,7 +39,7 @@ const About = () => {
               </p>
               <div className="hero-div">
                 <p>Call For New Electric Scooter</p>
-                <h2> 9891780956</h2>
+                <h2> 8527662372</h2>
                 <p>Email :</p>
                 <h2>
                   <a href="mailto:info@wroleyelectricscooter.com">
